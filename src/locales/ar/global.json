@@ -1,0 +1,439 @@
+{
+    "global": {
+        "phoneVerified": "تم التحقق بنجاح! يمكنك الآن الاستمتاع بجميع خدماتنا.",
+        "passwordVerified": "تم تحديث كلمة المرور بنجاح",
+        "continue": "متابعة",
+        "arabic": "العربية",
+        "english": "الإنجليزية",
+        "search": "بحث",
+        "loadingData": "جاري التحميل...",
+        "errorInLoadingData": "حدث خطأ أثناء تحميل البيانات",
+        "noDataFounded": "لا توجد بيانات",
+        "save": "حفظ",
+        "areYouSureDelete": "هل أنت متأكد من حذف ",
+        "areYouSureBlock": "هل أنت متأكد من حظر ",
+        "areYouSureUnBlock": "هل أنت متأكد من إلغاء حظر ",
+        "cancel": "إلغاء",
+        "confirm": "تأكيد",
+        "errorProcessingRequest": "حدث خطأ أثناء معالجة الطلب",
+        "successUpdateProcessingRequest": "تم تحديث البيانات بنجاح ",
+        "successAddProcessingRequest": "تم إضافة البيانات بنجاح ",
+        "add": "أضف",
+        "confirmLogout": "هل أنت متأكد من تسجيل الخروج؟",
+        "selected": "محدد",
+        "download": "تحميل",
+        "notUploadedFile": "لم يتم اختيار ملف بعد",
+        "dismatchPassword": "كلمة المرور الجديدة لا تطابق تأكيد كلمة المرور",
+        "active": "نشط",
+        "inActive": "غير نشط",
+        "positive": "تقييم إيجابي",
+        "passive": "تقييم سلبي",
+        "in_progress": "لم يتم الإنتهاء منها",
+        "completed": "تم الأنتهاء",
+        "unSelected": "غير محدد",
+        "update": "تحديث",
+        "yes": "نعم",
+        "no": "لا",
+        "hi": "مرحباً , ",
+        "dashboard": "لوحة التحكم",
+        "controls": "التحكم",
+        "sample": "عينة",
+        "admins": "مشرفين",
+        "selectAll": "تحديد الكل",
+        "pageNotFoundHeading": "الصفحة غير موجودة",
+        "pageNotFoundHint": "عفواً , المسار الذي تحاول الوصول إليه غير موجود في النطاق",
+        "unAuthorizedAccessHeading": "غير مصرح لك بالوصول للمحتوى",
+        "unAuthorizedAccessHint": "عفواً , أنت لا تمتلك صلاحية الوصول لهذه الصفحة بإستخدام معرفات إعتمادك التي قدمتها",
+        "berRangeOfTime": "عينة / الفترة الزمنية المحددة",
+        "downloadReport": "تحميل التقرير"
+    },
+    "layouts": {
+        "sideBar": {
+            "controlPanel": "لوحة التحكم",
+            "accounts": {
+                "heading": "إدارة الحسابات",
+                "admins": "المشرفون",
+                "blocked": "المحظورين",
+                "permissions": "الصلاحيات"
+            },
+            "roles": {
+                "title": "الأدوار"
+            },
+            "settings": {
+                "sampleCodes": "أكواد العينات",
+                "testCodes": "أكواد الإختبار",
+                "workflows": "مسارات العمل",
+                "refrigerators": "الثلاجات",
+                "freezers": "الفريزرات",
+                "laboratories": "المختبرات",
+                "title": "الإعددات",
+                "editMyProfile": "تعديل الملف الشخصي"
+            },
+            "samples": "إدارة العينات",
+            "bioBankingManagement": "إدارة حفظ العينات"
+        },
+        "header": {
+            "notifications": "الإشعارات",
+            "myProfile": "حسابي",
+            "logout": "تسجيل الخروج"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "تسجيل الدخول",
+            "hint": " أدخل بياناتك للبدء في استخدام لوحة التحكم وإدارة أعمالك بسهولة.",
+            "heroLoginHeading": "لوحة تحكم سهلة لإدارة أعمالك",
+            "heroLoginDescription": "استمتع بتجربة إدارة ذكية وآمنة من خلال لوحة تحكم مبسطة تساعدك على متابعة النظام وتنظيمه بكفاءة.",
+            "forgetPassword": "هل نسيت كلمة المرور؟",
+            "rememberMe": "تذكرني",
+            "fields": {
+                "email": "البريد الإلكتروني",
+                "emailPlaceHolder": "أدخل البريد الإلكتروني",
+                "phone": "رقم الجوال",
+                "phonePlaceHolder": "+966 أدخل رقم الجوال",
+                "password": "كلمة المرور",
+                "passwordConfirmation": "تأكيد كلمة المرور",
+                "passwordPlaceHolder": "أدخل كلمة المرور",
+                "passwordConfirmationPlaceHolder": "أعد إدخال كلمة المرور"
+            }
+        },
+        "forgetPassword": {
+            "title": "نسيت كلمة المرور؟",
+            "hint": "أدخل رقم جوالك المسجل وسنرسل لك رمز تحقق لإعادة تعيين كلمة المرور.",
+            "heroLoginDescription": "نسيت كلمة المرور؟ لا تقلق، أعد ضبطها بسهولة وواصل إدارة أعمالك دون انقطاع.",
+            "rememberPassword": "تذكّرت كلمة المرور؟",
+            "send": "إرسال"
+        },
+        "resetPassword": {
+            "title": "إعادة تعيين كلمة المرور",
+            "hint": "اختر كلمة مرور جديدة لحماية حسابك.",
+            "heroLoginDescription": "أنشئ كلمة مرور جديدة لحماية بياناتك وضمان تجربة سلسة وآمنة.",
+            "setNewPassword": "تعيين كلمة المررو"
+        },
+        "verifyOtp": {
+            "title": "تحقق من رقم الجوال",
+            "hint1": "أرسلنا رمز تحقق مكوّن من 4 أرقام إلى جوالك:",
+            "hint2": "يرجى إدخال الرمز أدناه لإكمال العملية.",
+            "heroLoginDescription": "أمانك أولويتنا. أدخل رمز التحقق لإكمال العملية بأمان.",
+            "verify": "تحقق"
+        }
+    },
+    "dashboard": {
+        "headerHint": "يمكنك هنا متابعة أداء المنصة وإدارة المستخدمين بسهولة."
+    },
+    "home": {
+        "receivedSamples": "العينات المستلمة",
+        "inProgressSamples": "عينات تحت الاختبار",
+        "completedSamples": "عينات مكتملة",
+        "canceledSamples": "عينات ملغاة",
+        "latestTransactions": {
+            "title": "أخر 10 أنشطة على النظام",
+            "created_by": "تم بواسطة",
+            "causer_type": "الكيان",
+            "description": "الوصف",
+            "event": "الحدث",
+            "date": "التاريخ"
+        }
+    },
+    "accountsManagement": {
+        "admins_table": {
+            "name": "الاسم",
+            "phone": "رقم الهاتف",
+            "permission": "دور المستخدم",
+            "status": "الحالة",
+            "date": "التاريخ"
+        },
+        "adminFields": {
+            "name": "اسم المشرف",
+            "namePlaceHolder": "أدخل اسم المشرف",
+            "phone": "رقم الجوال",
+            "phonePlaceHolder": "+966 أدخل رقم الجوال",
+            "permission": "دور المستخدم",
+            "permissionPlaceHolder": "أختر دور المستخدم",
+            "accountStatus": "حالة الحساب",
+            "accountStatusPlaceHolder": "أختر حالة الحساب",
+            "email": "البريد الإلكتروني",
+            "emailPlaceHolder": "أدخل البريد الإلكتروني"
+        },
+        "addAdmin": "اضافة مشرف",
+        "editAdmin": "تعديل بيانات مشرف",
+        "addAdminSuccessStatus": "تم اضافة المشرف بنجاح",
+        "blockAdminSuccessStatus": "تم حظر المشرف بنجاح",
+        "unBlockAdminSuccessStatus": "تم إسترجاع المشرف بنجاح",
+        "roles": {
+            "title": "الأدوار",
+            "addRole": "إضافة دور",
+            "deleteRoleStatusSuccess": "تم حذف الدور بنجاح",
+            "rolesFields": {
+                "name": "اسم الدور",
+                "namePlaceHolder": "أدخل اسم الدور",
+                "acceptOnlyEnLetters": "هذا الحقل يقبل حروف إنجليزية فقط"
+            }
+        }
+    },
+    "sampleCodesManagement": {
+        "sampleCodesFields": {
+            "name": "اسم العينة",
+            "namePlaceHolder": "أدخل اسم العينة",
+            "codePlaceHolder": "أدخل كود العينة",
+            "code": "كود العينة"
+        },
+        "sample_codes_table": {
+            "name": "اسم العينة",
+            "code": "كود العينة",
+            "date": "التاريخ"
+        },
+        "addSampleCode": "إضافة كود عينة",
+        "addClient": "إضافة حساب",
+        "addSampleCodeSuccessStatus": "تم اضافة كود العينة بنجاح",
+        "addCompany": "إضافة مؤسسة",
+        "addCompanyAccount": "إضافة حساب مؤسسة",
+        "editCompanyAccount": "تعديل حساب مؤسسة",
+        "editSampleCode": "تعديل بيانات نوع العينة",
+        "editClient": "تعديل بيانات العميل",
+        "deleteSampleCodeSuccessStatus": "تم حذف كود العينة بنجاح",
+        "unBlockAdminSuccessStatus": "تم إلغاء حظر حساب المشرف بنجاح",
+        "unBlockClientSuccessStatus": "تم إلغاء حظر حساب العميل بنجاح",
+        "unBlockCompanySuccessStatus": "تم إلغاء حظر حساب المؤسسة بنجاح",
+        "blockClientSuccessStatus": "تم حظر حساب العميل بنجاح",
+        "blockCompanySuccessStatus": "تم حظر حساب المؤسسة بنجاح"
+    },
+    "testCodesManagement": {
+        "testCodesFields": {
+            "name": "اسم كود الاختبار",
+            "namePlaceHolder": "أدخل اسم كود الاختبار",
+            "codePlaceHolder": "أدخل كود الاختبار",
+            "code": "كود الاختبار"
+        },
+        "test_codes_table": {
+            "name": "اسم رمز اختبار العينة",
+            "code": "كود اختبار العينة",
+            "date": "التاريخ"
+        },
+        "addTestCodeSuccessStatus": "تم اضافة كود اختبار العينة بنجاح",
+        "addTestCode": "إضافة كود إختبار",
+        "editTestCode": "تعديل كود اختبار"
+    },
+    "workflowsManagement": {
+        "workflowsFields": {
+            "name": "اسم مسار العمل",
+            "namePlaceHolder": "أدخل اسم مسار العمل",
+            "codePlaceHolder": "أدخل رمز مسار العمل",
+            "code": "رمز مسار العمل",
+            "sampleCodesPlaceHolder": "حدد رموز العينات المرتبطة بمسار العمل",
+            "sampleCodes": "أكواد العينات المرتبطة",
+            "testCodePlaceHolder": "حدد كود الإختبار المرتبط بمسار العمل",
+            "testCode": "كود الاختبار",
+            "stepOrderPlaceHolder": "حدد ترتيب تنفيذ كود الإختبار",
+            "stepOrder": "ترتيب التنفيذ"
+        },
+        "workflows_table": {
+            "name": "اسم مسار العمل",
+            "code": "رمز مسار العمل",
+            "description": "الوصف",
+            "date": "التاريخ"
+        },
+        "addWorkflowSuccessStatus": "تم اضافة مسار العمل بنجاح",
+        "deleteWorkflowSuccessStatus": "تم حذف مسار العمل بنجاح",
+        "addWorkflow": "إضافة مسار العمل",
+        "editWorkflow": "تعديل مسار العمل",
+        "addNewRecord": "إضافة صف جديد"
+    },
+    "laboratoryManagement": {
+        "laboratoryFields": {
+            "name": "اسم المختبر",
+            "namePlaceHolder": "أدخل اسم المختبر",
+            "description": "الوصف",
+            "descriptionPlaceHolder": "أدخل وصف المختبر",
+            "notes": "ملاحظات",
+            "notesPlaceHolder": "أدخل ملاحظات عن المختبر"
+        },
+        "laboratories_table": {
+            "name": "اسم المختبر",
+            "description": "الوصف",
+            "notes": "ملاحظات",
+            "date": "التاريخ"
+        },
+        "addLaboratorySuccessStatus": "تم اضافة المختبر بنجاح",
+        "deleteLaboratorySuccessStatus": "تم حذف المختبر بنجاح",
+        "addLaboratory": "اضافة مختبر",
+        "editLaboratory": "تعديل بيانات مختبر"
+    },
+    "refrigeratorManagement": {
+        "refrigeratorFields": {
+            "name": "اسم الثلاجة",
+            "namePlaceHolder": "أدخل اسم الثلاجة",
+            "description": "الوصف",
+            "descriptionPlaceHolder": "أدخل وصف الثلاجة",
+            "laboratory": "المختبر",
+            "laboratoryPlaceHolder": "قم بإختيار المختبر التابعة له الثلاجة"
+        },
+        "refrigerators_table": {
+            "name": "اسم الثلاجة",
+            "description": "الوصف",
+            "date": "التاريخ"
+        },
+        "addRefrigeratorSuccessStatus": "تم اضافة الثلاجة بنجاح",
+        "deleteRefrigeratorSuccessStatus": "تم حذف الثلاجة بنجاح",
+        "addRefrigerator": "اضافة ثلاجة",
+        "editRefrigerator": "تعديل بيانات ثلاجة"
+    },
+    "freezerManagement": {
+        "freezerFields": {
+            "name": "اسم الريزر",
+            "namePlaceHolder": "أدخل اسم الفريزر",
+            "description": "الوصف",
+            "descriptionPlaceHolder": "أدخل وصف الفريزر",
+            "laboratory": "المختبر",
+            "laboratoryPlaceHolder": "قم بإختيار المختبر التابع له الفريزر"
+        },
+        "freezers_table": {
+            "name": "اسم الفريزر",
+            "description": "الوصف",
+            "date": "التاريخ"
+        },
+        "addFreezerSuccessStatus": "تم اضافة الفريزر بنجاح",
+        "deleteFreezerSuccessStatus": "تم حذف الفريزر بنجاح",
+        "addFreezer": "اضافة فريرزر",
+        "editFreezer": "تعديل بيانات فريرزر"
+    },
+    "samplesManagement": {
+        "samples_table": {
+            "serial_name": "رمز التسلسل",
+            "serial_number": "رقم التسلسل",
+            "serial_full": "الرمز التسلسلي",
+            "sample_condition": "حالة العينة",
+            "current_status": "احدث حالة للعينة",
+            "is_completed": "هل أنتهت؟",
+            "qc_status": "اختبار الجودة",
+            "received_at": "ت الاستلام",
+            "started_at": "ت بداية العينة",
+            "completed_at": "ت نهاية العينة"
+        },
+        "sample_tests_status_table": {
+            "status": "الحالة",
+            "results": "النتائج",
+            "notes": "ملاحظات",
+            "performed_at": "تم بتاريخ",
+            "test_code": "كود الاختبار",
+            "created_by": "تم بواسطة"
+        },
+        "sample_logs_table": {
+            "from_status": "الحالة السابقة",
+            "to_status": "الحالة الحالية",
+            "type": "نوع التغيير",
+            "note": "ملاحظات",
+            "created_at": "التاريخ",
+            "created_by": "تم بواسطة"
+        },
+        "samplesFields": {
+            "serialName": "اسم الرمز التسلسلي",
+            "serialNamePlaceHolder": "أدخل اسم الرمز التسلسلي",
+            "receivedFrom": "الجهة المستلم منها العينة",
+            "receivedFromPlaceHolder": "أدخل اسم الجهة التي تم استلام العينة منها",
+            "receivedBy": "اسم مستلم العينة",
+            "receivedByPlaceHolder": "أدخل اسم مستلم العينة",
+            "qcStatus": "اختبار الجودة",
+            "qcStatusPlaceHolder": "حدد حالة اختبار الجودة",
+            "sampleCondition": "حالة العينة",
+            "sampleConditionPlaceHolder": "حدد حالة العينة عند استلامها",
+            "sampleCode": "رمز العينة",
+            "sampleCodePlaceHolder": "أختر رمز العينة المراد تحليلها",
+            "workflow": "مسار العمل",
+            "workflowPlaceHolder": "أختر مسار العمل",
+            "rejectReasonPlaceHolder": "أدخل سبب رفض QC للعينة",
+            "rejectReason": "سبب الرفض"
+        },
+        "addSample": "إضافة عينة",
+        "editSample": "تعديل بيانات العينة",
+        "editSampleData": "تتبع خطوات اختبار العينة",
+        "addSampleSuccessStatus": "تم اضافة العينة بنجاح",
+        "deleteSampleSuccessStatus": "تم حذف العينة بنجاح",
+        "sampleProfile": {
+            "mainInfo": "المعلومات الأساسية",
+            "mainInfoData": {
+                "serial_name": "رمز التسلسل",
+                "serial_number": "رقم التسلسل",
+                "serial_full": "الرمز التسلسلي الكامل",
+                "received_from": "اسم الجهة المستلم منها العينة",
+                "received_by": "اسم مستلم العينة",
+                "current_status": "احدث حالة سُجلت للعينة",
+                "is_completed": "هل تم الأنتهاء منها ؟",
+                "qc_status": "اختبار الجودة",
+                "received_at": "تاريخ استلام العينة",
+                "started_at": "تاريخ بدء العمل بالعينة",
+                "completed_at": "تاريخ انتهاء العمل بالعينة",
+                "canceled_at": "تاريخ رفض وإلغاء العمل بالعينة",
+                "sampleCondition": "حالة العينة",
+                "sampleCodeData": "بيانات نوع العينة",
+                "workflowData": "بيانات مسار العينة",
+                "rejectionReason": "سبب رفض العينة"
+            },
+            "sampleTestSteps": "خطوات اختبار العينة",
+            "logs": "سجل تاريخ العينة"
+        },
+        "editSampleTestStatus": "تعديل حالة اختبار العينة",
+        "samplesTestsStatusFields": {
+            "status": "حالة الإختبار",
+            "statusPlaceholder": "قم بتحديد موقف العينة من هذا الأختبار",
+            "description": "الوصف",
+            "descriptionPlaceholder": "أدخل وصف لإختبار العينة عند اداء هذا الأختبار",
+            "notesPlaceholder": "دون ملاحظات حدثت اثناء هذا الاختبار",
+            "notes": "ملاحظات",
+            "resultFile": "مرفق تقرير عن الاختبار",
+            "resultFilePlaceholder": "قم برفع تقرير عن نتيجة الاختبار"
+        }
+    },
+    "bioBankingManagement": {
+        "bioBanking_table": {
+            "tube_number": "رقم الأنبوب",
+            "laboratory": "المعمل",
+            "freezer_id": "رقم الفريزر",
+            "refrigerator_id": "رقم الثلاجة",
+            "temperature": "درجة الحرارة",
+            "notes": "ملاحظات",
+            "sample": "العينة",
+            "date": "التاريخ"
+        },
+        "bioBankingFields": {
+            "tubeNumber": "رقم الأنبوب",
+            "tubeNumberPlaceHolder": "أدخل رقم الانبوب",
+            "storageLocation": "موقع التخزين",
+            "storageLocationPlaceHolder": "أدخل موقع تخزين العينة",
+            "freezerNumber": "موقع التخزين (رقم الفريزر)",
+            "freezerNumberPlaceHolder": "أدخل رقم الفريزر الحافظ للعينة",
+            "refrigeratorNumber": "موقع التخزين (رقم الثلاجة)",
+            "refrigeratorNumberPlaceHolder": "أدخل رقم الثلاجة الحافظة للعينة",
+            "sample": "العينة",
+            "samplePlaceHolder": "أختر العينة المراد حفظها",
+            "temperature": "درجة حفظ العينة",
+            "temperaturePlaceHolder": "تحفظ العينة عند درجة حرارة ؟"
+        },
+        "addBioBanking": "إضافة نتيجة حيوية",
+        "editBioBanking": "تعديل نتيجة حيوية",
+        "addBioBankingSuccessStatus": "تم اضافة العينة بنجاح",
+        "deleteBioBankingSuccessStatus": "تم حذف العينة بنجاح"
+    },
+    "settings": {
+        "editMyProfile": {
+            "title": "تعديل الملف الشخصي",
+            "accountData": "بيانات الحساب",
+            "password": "كلمة المرور",
+            "current_password": "كلمة المرور الحالية",
+            "current_password_placeholder": "أدخل كلمة المرور الحالية",
+            "new_password": "كلمة المرور الجديدة",
+            "new_password_placeholder": "أدخل كلمة المرور الجديدة",
+            "confirmation_password": "تأكيد كلمة المرور",
+            "confirmation_password_placeholder": "أعد كتابة كلمة المرور",
+            "successUpdatePassword": "تم تحديث كلمة المرور بنجاح",
+            "failedUpdatePassword": "فشل تحديث كلمة المرور",
+            "successUpdateProfile": "تم تحديث البيانات",
+            "failedUpdateProfile": "فشل تحديث البيانات",
+            "name": "الاسم",
+            "namePlaceHolder": "أدخل الأسم",
+            "phone": "رقم الجوال",
+            "phonePlaceHolder": "أدخل رقم الجوال",
+            "removeUserProfileImage": "حذف الصورة"
+        }
+    }
+}

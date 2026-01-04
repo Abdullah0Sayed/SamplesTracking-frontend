@@ -1,0 +1,61 @@
+/** @type {import('tailwindcss').Config} */
+export default {
+  content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
+  theme: {
+    extend: {
+      width: {
+        card: "33.3125rem",
+      },
+      height: {
+        card: "116px",
+      },
+      fontFamily: {
+        montserrat: ["Montserrat-Regular", "sans-serif"],
+        "montserrat-bold": ["Montserrat-Bold", "sans-serif"],
+        cairo: ["Cairo-Regular", "sans-serif"],
+        "cairo-bold": ["Cairo-Bold", "sans-serif"],
+        almarai: ["Almarai-Regular", "sans-serif"],
+        "almarai-bold": ["Almarai-Bold", "sans-serif"],
+        "IBMPlexSansArabic-Regular": [
+          "IBMPlexSansArabic-Regular",
+          "sans-serif",
+        ],
+        "IBMPlexSansArabic-Medium": ["IBMPlexSansArabic-Medium", "sans-serif"],
+        "IBMPlexSansArabic-Bold": ["IBMPlexSansArabic-Bold", "sans-serif"],
+      },
+      colors: {
+        "primary-color": "#4F2A7A",
+        "second-color": "#E9D6FF",
+        "third-color": "#F0F0F0",
+        "white-1": "#ffffff",
+        "white-2": "#F2F2F2",
+        "black-1": "#000000",
+        "black-2": "#000e33",
+        "black-3": "#191919",
+        "black-4": "#020202",
+        "black-5": "#382f23",
+        "grey-1": "#ccc",
+        "grey-2": "#efefef",
+        "grey-3": "rgba(25, 25, 25, 0.88)",
+        "grey-4": "#4a4a4a",
+        "grey-5": "#a7a7a7",
+        "grey-6": "#454545",
+        "grey-7": "#191919cc",
+        "grey-8": "rgba(239, 239, 239, 0.6)",
+        "grey-9": "#2f2f2fb2",
+        "grey-10": "#444444",
+      },
+    },
+    screens: {
+      mobile: { max: "480px" },
+      tablet: { min: "481px", max: "768px" },
+      smallScreen: { min: "769px", max: "992px" },
+      medScreen: { min: "993px", max: "1200px" },
+      largeScreen: { min: "1201px", max: "1400px" },
+      XlargeScreen: { min: "1401px", max: "1800px" },
+      XXlargeScreen: { min: "1801px", max: "2400px" },
+      XXXlargeScreen: { min: "2401px" },
+    },
+  },
+  plugins: [],
+};

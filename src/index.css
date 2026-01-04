@@ -1,0 +1,123 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@font-face {
+  font-family: 'Montserrat-Regular';
+  src: url("assets/fonts/Montserrat-Regular.ttf");
+  font-display: swap;
+}
+
+
+@font-face {
+  font-family: 'Cairo-Regular';
+  src: url("assets/fonts/Cairo-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo-Medium';
+  src: url("assets/fonts/Cairo-Medium.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo-SemiBold';
+  src: url("assets/fonts/Cairo-SemiBold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Cairo-Bold';
+  src: url("assets/fonts/Cairo-Bold.ttf");
+  font-display: swap;
+}
+
+
+
+@font-face {
+  font-family: 'Almarai-Regular';
+  src: url("assets/fonts/Almarai-Regular.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Almarai-Bold';
+  src: url("assets/fonts/Almarai-Bold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Almarai-ExtraBold';
+  src: url("assets/fonts/Almarai-ExtraBold.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Almarai-Light';
+  src: url("assets/fonts/Almarai-Light.ttf");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'IBMPlexSansArabic-Regular';
+  src: url("assets/fonts/IBMPlexSansArabic-Regular.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBMPlexSansArabic-Medium';
+  src: url("assets/fonts/IBMPlexSansArabic-Medium.ttf");
+  font-display: swap;
+}
+@font-face {
+  font-family: 'IBMPlexSansArabic-Bold';
+  src: url("assets/fonts/IBMPlexSansArabic-Bold.ttf");
+  font-display: swap;
+}
+
+
+
+.custom-datepicker {
+  background-color: white;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.custom-datepicker .react-datepicker__header {
+  background-color: transparent;
+  border-bottom: none;
+}
+
+.custom-datepicker .react-datepicker__day--selected,
+.custom-datepicker .react-datepicker__day--in-range {
+  background-color: #e0d4f4;
+  color: #4b0082;
+}
+
+.custom-datepicker .react-datepicker__day--keyboard-selected {
+  background-color: #001845;
+  color: white;
+}
+
+.custom-datepicker .react-datepicker__day:hover {
+  background-color: #f3ebff;
+}
+
+.custom-datepicker .react-datepicker__day-name,
+.custom-datepicker .react-datepicker__day,
+.custom-datepicker__current-month {
+  font-size: 0.875rem;
+}
+
+.custom-datepicker .react-datepicker__today-button {
+  color: #001845;
+  font-weight: 500;
+}
+
+.custom-datepicker .react-datepicker__navigation-icon::before {
+  border-color: #001845;
+}

@@ -1,0 +1,5 @@
+DB ACCESS ----------
+--------------------
+DBNAME: lims_mol_tracking
+USERNAME: lims_mol_tracking_admin
+PASSWORD: 62piy@42p6lL%J*y

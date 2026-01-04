@@ -1,0 +1,439 @@
+{
+    "global": {
+        "phoneVerified": "Verified successfully! You can now enjoy all our services.",
+        "passwordVerified": "Password updated successfully",
+        "continue": "Continue",
+        "arabic": "Arabic",
+        "english": "English",
+        "search": "Search",
+        "loadingData": "Loading...",
+        "errorInLoadingData": "An error occurred while loading data",
+        "noDataFounded": "No data found",
+        "save": "Save",
+        "areYouSureDelete": "Are you sure you want to delete ",
+        "areYouSureBlock": "Are you sure you want to block ",
+        "areYouSureUnBlock": "Are you sure you want to unblock ",
+        "cancel": "Cancel",
+        "confirm": "Confirm",
+        "errorProcessingRequest": "An error occurred while processing the request",
+        "successUpdateProcessingRequest": "Data updated successfully",
+        "successAddProcessingRequest": "Data added successfully",
+        "add": "Add",
+        "confirmLogout": "Are you sure you want to log out?",
+        "selected": "Selected",
+        "download": "Download",
+        "notUploadedFile": "No file selected yet",
+        "dismatchPassword": "New password does not match confirmation password",
+        "active": "Active",
+        "inActive": "Inactive",
+        "positive": "Positive",
+        "passive": "Negative",
+        "in_progress": "Not completed yet",
+        "completed": "Completed",
+        "unSelected": "Unselected",
+        "update": "Update",
+        "yes": "Yes",
+        "no": "No",
+        "hi": "Hi, ",
+        "dashboard": "Dashboard",
+        "controls": "Controls",
+        "sample": "Sample",
+        "admins": "Admins",
+        "selectAll": "Select all",
+        "pageNotFoundHeading": "Page not found",
+        "pageNotFoundHint": "Sorry, the path you are trying to access does not exist.",
+        "unAuthorizedAccessHeading": "Unauthorized access",
+        "unAuthorizedAccessHint": "Sorry, you do not have permission to access this page using the provided credentials.",
+        "berRangeOfTime": "Sample / selected time range",
+        "downloadReport": "Download report"
+    },
+    "layouts": {
+        "sideBar": {
+            "controlPanel": "Control Panel",
+            "accounts": {
+                "heading": "Accounts Management",
+                "admins": "Admins",
+                "blocked": "Blocked",
+                "permissions": "Permissions"
+            },
+            "roles": {
+                "title": "Roles"
+            },
+            "settings": {
+                "sampleCodes": "Sample Codes",
+                "testCodes": "Test Codes",
+                "workflows": "Workflows",
+                "refrigerators": "Refrigerators",
+                "freezers": "Freezers",
+                "laboratories": "Laboratories",
+                "title": "Settings",
+                "editMyProfile": "Edit Profile"
+            },
+            "samples": "Samples Management",
+            "bioBankingManagement": "Biobanking Management"
+        },
+        "header": {
+            "notifications": "Notifications",
+            "myProfile": "My Profile",
+            "logout": "Logout"
+        }
+    },
+    "auth": {
+        "login": {
+            "title": "Login",
+            "hint": "Enter your details to start using the dashboard and manage your work easily.",
+            "heroLoginHeading": "An easy dashboard to manage your work",
+            "heroLoginDescription": "Enjoy a smart and secure management experience through a simplified dashboard that helps you monitor and organize the system efficiently.",
+            "forgetPassword": "Forgot password?",
+            "rememberMe": "Remember me",
+            "fields": {
+                "email": "Email",
+                "emailPlaceHolder": "Enter email",
+                "phone": "Mobile number",
+                "phonePlaceHolder": "+966 Enter mobile number",
+                "password": "Password",
+                "passwordConfirmation": "Confirm password",
+                "passwordPlaceHolder": "Enter password",
+                "passwordConfirmationPlaceHolder": "Re-enter password"
+            }
+        },
+        "forgetPassword": {
+            "title": "Forgot password?",
+            "hint": "Enter your registered mobile number and we will send you a verification code to reset your password.",
+            "heroLoginDescription": "Forgot your password? Don’t worry, reset it easily and continue managing your work without interruption.",
+            "rememberPassword": "Remembered your password?",
+            "send": "Send"
+        },
+        "resetPassword": {
+            "title": "Reset password",
+            "hint": "Choose a new password to secure your account.",
+            "heroLoginDescription": "Create a new password to protect your data and ensure a smooth and secure experience.",
+            "setNewPassword": "Set new password"
+        },
+        "verifyOtp": {
+            "title": "Verify mobile number",
+            "hint1": "We have sent a 4-digit verification code to your mobile:",
+            "hint2": "Please enter the code below to complete the process.",
+            "heroLoginDescription": "Your security is our priority. Enter the verification code to complete the process safely.",
+            "verify": "Verify"
+        }
+    },
+    "dashboard": {
+        "headerHint": "Here you can monitor platform performance and manage users easily."
+    },
+    "home": {
+        "receivedSamples": "Received samples",
+        "inProgressSamples": "Samples under testing",
+        "completedSamples": "Completed samples",
+        "canceledSamples": "Canceled samples",
+        "latestTransactions": {
+            "title": "Latest 10 system activities",
+            "created_by": "Created by",
+            "causer_type": "Entity",
+            "description": "Description",
+            "event": "Event",
+            "date": "Date"
+        }
+    },
+    "accountsManagement": {
+        "admins_table": {
+            "name": "Name",
+            "phone": "Phone number",
+            "permission": "User role",
+            "status": "Status",
+            "date": "Date"
+        },
+        "adminFields": {
+            "name": "Admin name",
+            "namePlaceHolder": "Enter admin name",
+            "phone": "Mobile number",
+            "phonePlaceHolder": "+966 Enter mobile number",
+            "permission": "User role",
+            "permissionPlaceHolder": "Select user role",
+            "accountStatus": "Account status",
+            "accountStatusPlaceHolder": "Select account status",
+            "email": "Email",
+            "emailPlaceHolder": "Enter email"
+        },
+        "addAdmin": "Add admin",
+        "editAdmin": "Edit admin data",
+        "addAdminSuccessStatus": "Admin added successfully",
+        "blockAdminSuccessStatus": "Admin blocked successfully",
+        "unBlockAdminSuccessStatus": "Admin restored successfully",
+        "roles": {
+            "title": "Roles",
+            "addRole": "Add role",
+            "deleteRoleStatusSuccess": "Role deleted successfully",
+            "rolesFields": {
+                "name": "Role name",
+                "namePlaceHolder": "Enter role name",
+                "acceptOnlyEnLetters": "This field accepts English letters only"
+            }
+        }
+    },
+    "sampleCodesManagement": {
+        "sampleCodesFields": {
+            "name": "Sample name",
+            "namePlaceHolder": "Enter sample name",
+            "codePlaceHolder": "Enter sample code",
+            "code": "Sample code"
+        },
+        "sample_codes_table": {
+            "name": "Sample name",
+            "code": "Sample code",
+            "date": "Date"
+        },
+        "addSampleCode": "Add sample code",
+        "addClient": "Add account",
+        "addSampleCodeSuccessStatus": "Sample code added successfully",
+        "addCompany": "Add company",
+        "addCompanyAccount": "Add company account",
+        "editCompanyAccount": "Edit company account",
+        "editSampleCode": "Edit sample type data",
+        "editClient": "Edit client data",
+        "deleteSampleCodeSuccessStatus": "Sample code deleted successfully",
+        "unBlockAdminSuccessStatus": "Admin account unblocked successfully",
+        "unBlockClientSuccessStatus": "Client account unblocked successfully",
+        "unBlockCompanySuccessStatus": "Company account unblocked successfully",
+        "blockClientSuccessStatus": "Client account blocked successfully",
+        "blockCompanySuccessStatus": "Company account blocked successfully"
+    },
+    "testCodesManagement": {
+        "testCodesFields": {
+            "name": "Test code name",
+            "namePlaceHolder": "Enter test code name",
+            "codePlaceHolder": "Enter test code",
+            "code": "Test code"
+        },
+        "test_codes_table": {
+            "name": "Sample test code name",
+            "code": "Sample test code",
+            "date": "Date"
+        },
+        "addTestCodeSuccessStatus": "Sample test code added successfully",
+        "addTestCode": "Add test code",
+        "editTestCode": "Edit test code"
+    },
+    "workflowsManagement": {
+        "workflowsFields": {
+            "name": "Workflow name",
+            "namePlaceHolder": "Enter workflow name",
+            "codePlaceHolder": "Enter workflow code",
+            "code": "Workflow code",
+            "sampleCodesPlaceHolder": "Select sample codes related to workflow",
+            "sampleCodes": "Related sample codes",
+            "testCodePlaceHolder": "Select test code related to workflow",
+            "testCode": "Test code",
+            "stepOrderPlaceHolder": "Select execution order",
+            "stepOrder": "Execution order"
+        },
+        "workflows_table": {
+            "name": "Workflow name",
+            "code": "Workflow code",
+            "description": "Description",
+            "date": "Date"
+        },
+        "addWorkflowSuccessStatus": "Workflow added successfully",
+        "deleteWorkflowSuccessStatus": "Workflow deleted successfully",
+        "addWorkflow": "Add workflow",
+        "editWorkflow": "Edit workflow",
+        "addNewRecord": "Add new row"
+    },
+    "laboratoryManagement": {
+        "laboratoryFields": {
+            "name": "Laboratory name",
+            "namePlaceHolder": "Enter laboratory name",
+            "description": "Description",
+            "descriptionPlaceHolder": "Enter laboratory description",
+            "notes": "Notes",
+            "notesPlaceHolder": "Enter laboratory notes"
+        },
+        "laboratories_table": {
+            "name": "Laboratory name",
+            "description": "Description",
+            "notes": "Notes",
+            "date": "Date"
+        },
+        "addLaboratorySuccessStatus": "Laboratory added successfully",
+        "deleteLaboratorySuccessStatus": "Laboratory deleted successfully",
+        "addLaboratory": "Add laboratory",
+        "editLaboratory": "Edit laboratory data"
+    },
+    "refrigeratorManagement": {
+        "refrigeratorFields": {
+            "name": "Refrigerator name",
+            "namePlaceHolder": "Enter refrigerator name",
+            "description": "Description",
+            "descriptionPlaceHolder": "Enter refrigerator description",
+            "laboratory": "Laboratory",
+            "laboratoryPlaceHolder": "Select laboratory"
+        },
+        "refrigerators_table": {
+            "name": "Refrigerator name",
+            "description": "Description",
+            "date": "Date"
+        },
+        "addRefrigeratorSuccessStatus": "Refrigerator added successfully",
+        "deleteRefrigeratorSuccessStatus": "Refrigerator deleted successfully",
+        "addRefrigerator": "Add refrigerator",
+        "editRefrigerator": "Edit refrigerator data"
+    },
+    "freezerManagement": {
+        "freezerFields": {
+            "name": "Freezer name",
+            "namePlaceHolder": "Enter freezer name",
+            "description": "Description",
+            "descriptionPlaceHolder": "Enter freezer description",
+            "laboratory": "Laboratory",
+            "laboratoryPlaceHolder": "Select laboratory"
+        },
+        "freezers_table": {
+            "name": "Freezer name",
+            "description": "Description",
+            "date": "Date"
+        },
+        "addFreezerSuccessStatus": "Freezer added successfully",
+        "deleteFreezerSuccessStatus": "Freezer deleted successfully",
+        "addFreezer": "Add freezer",
+        "editFreezer": "Edit freezer data"
+    },
+    "samplesManagement": {
+        "samples_table": {
+            "serial_name": "Serial name",
+            "serial_number": "Serial number",
+            "serial_full": "Full serial",
+            "sample_condition": "Sample condition",
+            "current_status": "Current sample status",
+            "is_completed": "Completed?",
+            "qc_status": "Quality control",
+            "received_at": "Received at",
+            "started_at": "Started at",
+            "completed_at": "Completed at"
+        },
+        "sample_tests_status_table": {
+            "status": "Status",
+            "results": "Results",
+            "notes": "Notes",
+            "performed_at": "Performed at",
+            "test_code": "Test code",
+            "created_by": "Created by"
+        },
+        "sample_logs_table": {
+            "from_status": "Previous status",
+            "to_status": "Current status",
+            "type": "Change type",
+            "note": "Notes",
+            "created_at": "Date",
+            "created_by": "Created by"
+        },
+        "samplesFields": {
+            "serialName": "Serial name",
+            "serialNamePlaceHolder": "Enter serial name",
+            "receivedFrom": "Received from",
+            "receivedFromPlaceHolder": "Enter source name",
+            "receivedBy": "Received by",
+            "receivedByPlaceHolder": "Enter receiver name",
+            "qcStatus": "Quality control",
+            "qcStatusPlaceHolder": "Select QC status",
+            "sampleCondition": "Sample condition",
+            "sampleConditionPlaceHolder": "Select sample condition",
+            "sampleCode": "Sample code",
+            "sampleCodePlaceHolder": "Select sample code",
+            "workflow": "Workflow",
+            "workflowPlaceHolder": "Select workflow",
+            "rejectReasonPlaceHolder": "Enter QC rejection reason",
+            "rejectReason": "Rejection reason"
+        },
+        "addSample": "Add sample",
+        "editSample": "Edit sample",
+        "editSampleData": "Track sample testing steps",
+        "addSampleSuccessStatus": "Sample added successfully",
+        "deleteSampleSuccessStatus": "Sample deleted successfully",
+        "sampleProfile": {
+            "mainInfo": "Main information",
+            "mainInfoData": {
+                "serial_name": "Serial name",
+                "serial_number": "Serial number",
+                "serial_full": "Full serial",
+                "received_from": "Received from",
+                "received_by": "Received by",
+                "current_status": "Latest recorded status",
+                "is_completed": "Completed?",
+                "qc_status": "Quality control",
+                "received_at": "Received date",
+                "started_at": "Start date",
+                "completed_at": "Completion date",
+                "canceled_at": "Cancellation date",
+                "sampleCondition": "Sample condition",
+                "sampleCodeData": "Sample type data",
+                "workflowData": "Workflow data",
+                "rejectionReason": "Rejection reason"
+            },
+            "sampleTestSteps": "Sample test steps",
+            "logs": "Sample history log"
+        },
+        "editSampleTestStatus": "Edit sample test status",
+        "samplesTestsStatusFields": {
+            "status": "Test status",
+            "statusPlaceholder": "Select test status",
+            "description": "Description",
+            "descriptionPlaceholder": "Enter test description",
+            "notesPlaceholder": "Enter notes during this test",
+            "notes": "Notes",
+            "resultFile": "Test report attachment",
+            "resultFilePlaceholder": "Upload test result report"
+        }
+    },
+    "bioBankingManagement": {
+        "bioBanking_table": {
+            "tube_number": "Tube number",
+            "laboratory": "Laboratory",
+            "freezer_id": "Freezer number",
+            "refrigerator_id": "Refrigerator number",
+            "temperature": "Temperature",
+            "notes": "Notes",
+            "sample": "Sample",
+            "date": "Date"
+        },
+        "bioBankingFields": {
+            "tubeNumber": "Tube number",
+            "tubeNumberPlaceHolder": "Enter tube number",
+            "storageLocation": "Storage location",
+            "storageLocationPlaceHolder": "Enter storage location",
+            "freezerNumber": "Storage location (Freezer number)",
+            "freezerNumberPlaceHolder": "Enter freezer number",
+            "refrigeratorNumber": "Storage location (Refrigerator number)",
+            "refrigeratorNumberPlaceHolder": "Enter refrigerator number",
+            "sample": "Sample",
+            "samplePlaceHolder": "Select sample",
+            "temperature": "Storage temperature",
+            "temperaturePlaceHolder": "Sample stored at which temperature?"
+        },
+        "addBioBanking": "Add biobanking record",
+        "editBioBanking": "Edit biobanking record",
+        "addBioBankingSuccessStatus": "Sample added successfully",
+        "deleteBioBankingSuccessStatus": "Sample deleted successfully"
+    },
+    "settings": {
+        "editMyProfile": {
+            "title": "Edit profile",
+            "accountData": "Account data",
+            "password": "Password",
+            "current_password": "Current password",
+            "current_password_placeholder": "Enter current password",
+            "new_password": "New password",
+            "new_password_placeholder": "Enter new password",
+            "confirmation_password": "Confirm password",
+            "confirmation_password_placeholder": "Re-enter password",
+            "successUpdatePassword": "Password updated successfully",
+            "failedUpdatePassword": "Failed to update password",
+            "successUpdateProfile": "Profile updated successfully",
+            "failedUpdateProfile": "Failed to update profile",
+            "name": "Name",
+            "namePlaceHolder": "Enter name",
+            "phone": "Mobile number",
+            "phonePlaceHolder": "Enter mobile number",
+            "removeUserProfileImage": "Remove image"
+        }
+    }
+}

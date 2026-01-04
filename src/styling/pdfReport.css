@@ -1,0 +1,29 @@
+/* ===== PDF ===== */
+.pdf-report {
+    width: 794px;
+    /* A4 width */
+    padding: 32px;
+    background: #fff;
+    color: #111;
+    font-family: Arial, sans-serif;
+}
+
+.pdf-report h3 {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.pdf-report .shadow,
+.pdf-report .shadow-lg {
+    box-shadow: none !important;
+}
+
+.pdf-report .pdf-card,
+.pdf-report .pdf-section {
+    page-break-inside: avoid;
+    border: 1px solid #eee;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+}
