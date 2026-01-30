@@ -1,6 +1,6 @@
 import http from "../http";
 
-const ENDPOINT = `admin/users`;
+const ENDPOINT = `users`;
 
 export const adminsService = {
   getAllAdmins: (params = {}) => http.get(ENDPOINT, { params }),
@@ -10,6 +10,6 @@ export const adminsService = {
   addAdmin: (payload) => http.post(`${ENDPOINT}`, payload),
   updateAdmin: (payload) => http.put(`${ENDPOINT}/${payload.id}`, payload),
   getAdmin: (id) => http.get(`${ENDPOINT}/${id}`),
-  bulkActions: (ids = [], action) =>
-    http.post(`admin/userBulkActions`, { ids, action }),
+  exportSheet: (ids = [], action) =>
+    http.post(`${ENDPOINT}/export-csv`, { ids, action }),
 };

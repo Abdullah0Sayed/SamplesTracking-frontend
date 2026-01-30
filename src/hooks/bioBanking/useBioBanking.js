@@ -6,6 +6,8 @@ import { bioBankingService } from "../../services/bioBanking/bioBankingService";
 const INITIAL_FILTERS = {
   sorted_by: "",
   search: "",
+  item_type: "",
+  sample_id: "",
 };
 
 export default function useBioBanking(initialPage = 1) {
@@ -34,6 +36,8 @@ export default function useBioBanking(initialPage = 1) {
       const { data } = await bioBankingService.getAllBioBanking({
         sorted_by: filters.sorted_by || undefined,
         search: filters.search || undefined,
+        item_type: filters.item_type || undefined,
+        sample_id: filters.sample_id || undefined,
         page: pagination.current,
       });
 
@@ -49,7 +53,13 @@ export default function useBioBanking(initialPage = 1) {
     } finally {
       setLoading(false);
     }
-  }, [filters.sorted_by, filters.search, pagination.current]);
+  }, [
+    filters.sorted_by,
+    filters.search,
+    filters.sample_id,
+    filters.item_type,
+    pagination.current,
+  ]);
 
   /** Auto Fetch on First Load + Filters + Pagination Change */
   useEffect(() => {
@@ -97,5 +107,15 @@ export default function useBioBanking(initialPage = 1) {
     fetchBioBanking,
     /** Manual Refetch */
     refetchBioBankingResults: fetchBioBankingResults,
+
+    exportSheet: async (ids = []) => {
+      try {
+        const { data } = await bioBankingService.exportSheet(ids);
+        window.open(data.data, "_blank");
+      } catch (e) {
+        console.log(e);
+        alert("فشل تصدير شيت الإكسيل");
+      }
+    },
   };
 }

@@ -1,6 +1,6 @@
 import http from "../http";
 
-const ENDPOINT = `test-codes`;
+const ENDPOINT = `test-types`;
 
 export const testCodesService = {
   getAllTestCodes: (params = {}) => http.get(ENDPOINT, { params }),
@@ -9,4 +9,6 @@ export const testCodesService = {
   getTestCode: (id) => http.get(`${ENDPOINT}/${id}`),
   updateTestCode: (payload) => http.patch(`${ENDPOINT}/${payload.id}`, payload),
   deleteTestCode: (id) => http.delete(`${ENDPOINT}/${id}`),
+  exportSheet: (ids = [], action) =>
+    http.post(`${ENDPOINT}/export-csv`, { ids, action }),
 };

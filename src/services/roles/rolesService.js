@@ -1,6 +1,6 @@
 import http from "../http";
 
-const ENDPOINT = `admin/roles`;
+const ENDPOINT = `roles`;
 
 export const rolesService = {
   getAllRoles: () => http.get(`${ENDPOINT}`),

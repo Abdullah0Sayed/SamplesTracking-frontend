@@ -13,6 +13,7 @@ export const handleBulk = async ({
       const link = document.createElement("a");
       link.href = fileUrl;
       link.setAttribute("download", "");
+      link.setAttribute("target", "_blank");
       document.body.appendChild(link);
       link.click();
       link.remove();

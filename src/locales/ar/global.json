@@ -60,17 +60,28 @@
                 "title": "الأدوار"
             },
             "settings": {
-                "sampleCodes": "أكواد العينات",
-                "testCodes": "أكواد الإختبار",
+                "sampleCodes": "أنواع العينات",
+                "testCodes": "أنواع الإختبارات",
                 "workflows": "مسارات العمل",
                 "refrigerators": "الثلاجات",
                 "freezers": "الفريزرات",
                 "laboratories": "المختبرات",
                 "title": "الإعددات",
-                "editMyProfile": "تعديل الملف الشخصي"
+                "departments": "الأقسام",
+                "masterSteps": "الخطوات الرئيسية للإختبارات",
+                "storageLocations": "مواقع التخزين",
+                "workflowSteps": "تعريف حركة المسارات",
+                "queues": "قوائم العمل",
+                "editMyProfile": "تعديل الملف الشخصي",
+                "stepSlasRules": "تعريف الوقت لخطوات الأختبار"
             },
             "samples": "إدارة العينات",
-            "bioBankingManagement": "إدارة حفظ العينات"
+            "bioBankingManagement": "إدارة حفظ العينات",
+            "queuesManagement": {
+                "title": "إدارة قوائم العمل",
+                "queues": "قوائم العمل",
+                "overView": "نظرة عامة"
+            }
         },
         "header": {
             "notifications": "الإشعارات",
@@ -123,7 +134,7 @@
     },
     "home": {
         "receivedSamples": "العينات المستلمة",
-        "inProgressSamples": "عينات تحت الاختبار",
+        "inProgressSamples": "عينات قيد المعالجة",
         "completedSamples": "عينات مكتملة",
         "canceledSamples": "عينات ملغاة",
         "latestTransactions": {
@@ -133,6 +144,14 @@
             "description": "الوصف",
             "event": "الحدث",
             "date": "التاريخ"
+        },
+        "latestHandoff": {
+            "title": "أحدث 10 عمليات تسليم بين الأقسام",
+            "sample_barcode": "باركود العينة",
+            "from_department": "من قسم",
+            "to_department": "إلى قسم",
+            "transfer_at": "تم الأنتقال بتاريخ",
+            "created_by": "تم بواسطة"
         }
     },
     "accountsManagement": {
@@ -148,8 +167,12 @@
             "namePlaceHolder": "أدخل اسم المشرف",
             "phone": "رقم الجوال",
             "phonePlaceHolder": "+966 أدخل رقم الجوال",
+            "password": "كلمة المرور",
+            "passwordPlaceHolder": "أدخل كلمة المرور",
             "permission": "دور المستخدم",
             "permissionPlaceHolder": "أختر دور المستخدم",
+            "departments": "ربط المستخدم بالأقسام",
+            "departmentsPlaceHolder": "أختر الاقسام المسموحة للمستخدم",
             "accountStatus": "حالة الحساب",
             "accountStatusPlaceHolder": "أختر حالة الحساب",
             "email": "البريد الإلكتروني",
@@ -173,25 +196,25 @@
     },
     "sampleCodesManagement": {
         "sampleCodesFields": {
-            "name": "اسم العينة",
-            "namePlaceHolder": "أدخل اسم العينة",
-            "codePlaceHolder": "أدخل كود العينة",
+            "name": "اسم نوع العينة",
+            "namePlaceHolder": "أدخل اسم نوع العينة",
+            "codePlaceHolder": "أدخل كود نوع العينة",
             "code": "كود العينة"
         },
         "sample_codes_table": {
-            "name": "اسم العينة",
-            "code": "كود العينة",
+            "name": "اسم نوع العينة",
+            "code": "كود نوع العينة",
             "date": "التاريخ"
         },
-        "addSampleCode": "إضافة كود عينة",
+        "addSampleCode": "إضافة نوع عينة",
         "addClient": "إضافة حساب",
-        "addSampleCodeSuccessStatus": "تم اضافة كود العينة بنجاح",
+        "addSampleCodeSuccessStatus": "تم اضافة نوع العينة بنجاح",
         "addCompany": "إضافة مؤسسة",
         "addCompanyAccount": "إضافة حساب مؤسسة",
         "editCompanyAccount": "تعديل حساب مؤسسة",
         "editSampleCode": "تعديل بيانات نوع العينة",
         "editClient": "تعديل بيانات العميل",
-        "deleteSampleCodeSuccessStatus": "تم حذف كود العينة بنجاح",
+        "deleteSampleCodeSuccessStatus": "تم حذف نوع العينة بنجاح",
         "unBlockAdminSuccessStatus": "تم إلغاء حظر حساب المشرف بنجاح",
         "unBlockClientSuccessStatus": "تم إلغاء حظر حساب العميل بنجاح",
         "unBlockCompanySuccessStatus": "تم إلغاء حظر حساب المؤسسة بنجاح",
@@ -200,19 +223,128 @@
     },
     "testCodesManagement": {
         "testCodesFields": {
-            "name": "اسم كود الاختبار",
-            "namePlaceHolder": "أدخل اسم كود الاختبار",
-            "codePlaceHolder": "أدخل كود الاختبار",
-            "code": "كود الاختبار"
+            "name": "اسم نوع الاختبار",
+            "namePlaceHolder": "أدخل اسم نوع الاختبار",
+            "codePlaceHolder": "أدخل كود نوع الاختبار",
+            "code": "كود نوع الاختبار",
+            "sampleTypesPlaceHolder": "تحديد أنواع العينات المرتبطة بالأختبار",
+            "sampleTypes": "ربط بأنواع العينات"
         },
         "test_codes_table": {
-            "name": "اسم رمز اختبار العينة",
-            "code": "كود اختبار العينة",
+            "name": "اسم نوع الاختبار",
+            "code": "كود نوع الاختبار",
             "date": "التاريخ"
         },
-        "addTestCodeSuccessStatus": "تم اضافة كود اختبار العينة بنجاح",
-        "addTestCode": "إضافة كود إختبار",
-        "editTestCode": "تعديل كود اختبار"
+        "addTestCodeSuccessStatus": "تم اضافة نوع اختبار العينة بنجاح",
+        "addTestCode": "إضافة نوع إختبار",
+        "editTestCode": "تعديل نوع اختبار"
+    },
+    "departmentsManagement": {
+        "departmentsFields": {
+            "name": "اسم القسم",
+            "namePlaceHolder": "أدخل اسم القسم",
+            "codePlaceHolder": "أدخل كود القسم",
+            "code": "كود القسم",
+            "isActivePlaceHolder": "تحديد حالة النشاط",
+            "isActive": "حالة النشاط "
+        },
+        "departments_table": {
+            "name": "اسم القسم",
+            "code": "كود القسم",
+            "date": "التاريخ"
+        },
+        "addDepartmentSuccessStatus": "تم اضافة القسم بنجاح",
+        "deleteDepartmentSuccessStatus": "تم حذف القسم بنجاح",
+        "addDepartment": "إضافة قسم جديد",
+        "editDepartment": "تعديل بيانات قسم"
+    },
+    "masterStepsManagement": {
+        "masterStepsFields": {
+            "stepName": "اسم الخطوة",
+            "stepNamePlaceHolder": "أدخل اسم الخطوة",
+            "stepCodePlaceHolder": "أدخل كود الخطوة",
+            "stepCode": "كود الخطوة",
+            "descriptionPlaceHolder": "أدخل وصف قصير للخطوة",
+            "description": "الوصف "
+        },
+        "masterSteps_table": {
+            "stepName": "اسم القسم",
+            "stepCode": "كود القسم",
+            "description": "وصف",
+            "date": "التاريخ"
+        },
+        "addMasterStepSuccessStatus": "تم اضافة الخطوة بنجاح",
+        "deleteMasterStepSuccessStatus": "تم حذف الخطوة بنجاح",
+        "addMasterStep": "إضافة خطوة جديد",
+        "editMasterStep": "تعديل بيانات خطوة"
+    },
+    "storageLocationsManagement": {
+        "storageLocationsFields": {
+            "unitName": "اسم موقع التخزين",
+            "unitNamePlaceHolder": "أدخل اسم موقع التخزين",
+            "unitType": "نوع موقع التخزين",
+            "unitTypePlaceHolder": "أدخل نوع موقع التخزين",
+            "totalShelves": "إجمالي الرفوف",
+            "totalShelvesPlaceHolder": "أدخل إجمالي عدد الرفوف",
+            "racksPerShelf": "إجمالي عدد الراكات لكل رف",
+            "racksPerShelfPlaceHolder": "أدخل إجمالي عدد الراكات لكل رف",
+            "boxCapacity": "سعة الصندوق",
+            "boxCapacityPlaceHolder": "أدخل سعة الصندوق (مثال) 9*9",
+            "activePlaceHolder": "أختر حالة النشاط",
+            "active": "حالة النشاط"
+        },
+        "storageLocations_table": {
+            "unitName": "الأسم",
+            "unitType": "النوع",
+            "totalShelves": "عدد الرفوف",
+            "racksPerShelf": "راك/رف",
+            "boxCapacity": "سعة الصندوق",
+            "active": "الحالة",
+            "date": "التاريخ"
+        },
+        "addStorageLocationSuccessStatus": "تم اضافة موقع التخزين بنجاح",
+        "deleteStorageLocationSuccessStatus": "تم حذف موقع التخزين بنجاح",
+        "addStorageLocation": "إضافة موقع تخزين جديد",
+        "editStorageLocation": "تعديل بيانات موقع تخزين"
+    },
+     "workflowStepsManagement": {
+        "workflowStepsFields": {
+            "testType": "نوع الاختبار",
+            "testTypePlaceHolder": "قم بإختيار نوع الأختبار",
+            "department": "القسم",
+            "departmentPlaceHolder": "قم بإختيار القسم المرتبط بنوع الاختبار",
+            "masterStep": "خطوة الأختبار",
+            "masterStepPlaceHolder": "قم بتحديد خطوة الأختبار",
+            "stepOrder": "ترتيب التنفيذ",
+            "stepOrderPlaceHolder": "أدخل ترتيب تنفيذ خطوة الأختبار",
+            "finalStep": "هل هي أخر خطوة في التنفيذ",
+            "finalStepPlaceHolder": "حدد إذا كانت أخر خطوة في خطوات الأختبار"
+        },
+        "workflowSteps_table": {
+            "testType": "نوع الأختبار",
+            "department": "القسم",
+            "masterStep": "خطوة الاختبار",
+            "stepOrder": "ترتيب التنفيذ",
+            "isFinalStep": "أخر خطوة؟",
+            "date": "التاريخ"
+        },
+        "addWorkflowStepSuccessStatus": "تم اضافة تعريف حركة مسار جديدة بنجاح",
+        "deleteWorkflowStepSuccessStatus": "تم حذف تعريف حركة مسار جديدة بنجاح",
+        "addWorkflowStep": "إضافة تعريف حركة مسار جديدة جديد",
+        "editWorkflowStep": "تعديل بيانات تعريف حركة مسار"
+    },
+    "queuesManagement": {
+        "title": "قوائم العمل",
+        "queues_table": {
+            "barcode": "باركود",
+            "department": "القسم الحالي",
+            "current_step": "الخطوة الحالية",
+            "queue_name": "اسم قسم العمل",
+            "counts_for_same_test_type": "عدد العينات لنفس الاختبار",
+            "workflow_started_at": "تاريخ بدء مسار العمل",
+            "current_step_started_at": "تاريخ بدء الخطوة الحالية",
+            "date": "التاريخ"
+        }
     },
     "workflowsManagement": {
         "workflowsFields": {
@@ -301,14 +433,20 @@
         "samples_table": {
             "serial_name": "رمز التسلسل",
             "serial_number": "رقم التسلسل",
-            "serial_full": "الرمز التسلسلي",
+            "barcode": "باركود",
+            "process_status": "حالة العملية",
+            "result_status": "حالة النتيجة",
+            "department": "القسم الحالي",
+            "test_type": "نوع العينة",
+            "received_by": "المستلم",
             "sample_condition": "حالة العينة",
             "current_status": "احدث حالة للعينة",
             "is_completed": "هل أنتهت؟",
             "qc_status": "اختبار الجودة",
             "received_at": "ت الاستلام",
             "started_at": "ت بداية العينة",
-            "completed_at": "ت نهاية العينة"
+            "completed_at": "ت نهاية العينة",
+            "date": "التاريخ"
         },
         "sample_tests_status_table": {
             "status": "الحالة",
@@ -333,6 +471,8 @@
             "receivedFromPlaceHolder": "أدخل اسم الجهة التي تم استلام العينة منها",
             "receivedBy": "اسم مستلم العينة",
             "receivedByPlaceHolder": "أدخل اسم مستلم العينة",
+            "testType": "نوع الأختبار",
+            "testTypePlaceHolder": "قم بإختيار نوع الأختبار",
             "qcStatus": "اختبار الجودة",
             "qcStatusPlaceHolder": "حدد حالة اختبار الجودة",
             "sampleCondition": "حالة العينة",
@@ -354,9 +494,14 @@
             "mainInfoData": {
                 "serial_name": "رمز التسلسل",
                 "serial_number": "رقم التسلسل",
-                "serial_full": "الرمز التسلسلي الكامل",
+                "barcode": "باركود",
+                "testType": "نوع الأختبار",
+                "processStatus": "حالة العملية",
                 "received_from": "اسم الجهة المستلم منها العينة",
                 "received_by": "اسم مستلم العينة",
+                "currentStep": "الخطوة الحالية",
+                "currentDepartment": "القسم الحالي",
+                "created_at": "التاريخ",
                 "current_status": "احدث حالة سُجلت للعينة",
                 "is_completed": "هل تم الأنتهاء منها ؟",
                 "qc_status": "اختبار الجودة",
@@ -367,7 +512,15 @@
                 "sampleCondition": "حالة العينة",
                 "sampleCodeData": "بيانات نوع العينة",
                 "workflowData": "بيانات مسار العينة",
-                "rejectionReason": "سبب رفض العينة"
+                "rejectionReason": "سبب رفض العينة",
+                "title": "بيانات العينة",
+                "moveToNextDepartment": "تحويل للقسم التالي",
+                "openBioBankingProcess": "فتح إجراءات الحفظ",
+                "updateReceivingQcStatus": "تحديث حالة اختبار الجودة",
+                "printBarcode": "طباعة"
+            },
+            "workflowLogs": {
+                "title": "الجدول الزمني لخطوات العمل"
             },
             "sampleTestSteps": "خطوات اختبار العينة",
             "logs": "سجل تاريخ العينة"
@@ -386,33 +539,138 @@
     },
     "bioBankingManagement": {
         "bioBanking_table": {
-            "tube_number": "رقم الأنبوب",
-            "laboratory": "المعمل",
-            "freezer_id": "رقم الفريزر",
-            "refrigerator_id": "رقم الثلاجة",
-            "temperature": "درجة الحرارة",
-            "notes": "ملاحظات",
+            "subBarCode": "باركود",
             "sample": "العينة",
+            "itemType": "نوع حفظ النتيجة الحيوية",
+            "temperature": "درجة حفظ العينة",
+            "volume": "حجم الانبوب",
+            "tubeType": "نوع الانبوب",
+            "storageLocation": "موقع التخزين",
+            "shelf": "موقع الرف",
+            "rack": "موقع الراكات",
+            "box": "موقع البوكس",
+            "position": "فهرس الموقع",
+            "notes": "ملاحظات",
+            "plateType": "نوع اللوحة",
+            "usedWells": "الأبار المستخدمة",
+            "aliquotNumber": "عدد العينات الجزئية (ALIQUOT)",
+            "concentration": "تركيز العينات الجزئية (ng/µL)",
+            "mediaType": "نوع الوسط",
+            "glycerolPercentage": "نسبة الجليسرول",
             "date": "التاريخ"
         },
         "bioBankingFields": {
-            "tubeNumber": "رقم الأنبوب",
-            "tubeNumberPlaceHolder": "أدخل رقم الانبوب",
-            "storageLocation": "موقع التخزين",
-            "storageLocationPlaceHolder": "أدخل موقع تخزين العينة",
-            "freezerNumber": "موقع التخزين (رقم الفريزر)",
-            "freezerNumberPlaceHolder": "أدخل رقم الفريزر الحافظ للعينة",
-            "refrigeratorNumber": "موقع التخزين (رقم الثلاجة)",
-            "refrigeratorNumberPlaceHolder": "أدخل رقم الثلاجة الحافظة للعينة",
             "sample": "العينة",
             "samplePlaceHolder": "أختر العينة المراد حفظها",
+            "itemTypePlaceHolder": "أختر نوع حغظ النتيجة الحيوية",
+            "itemType": "نوع حفظ النتيجة الحيوية",
             "temperature": "درجة حفظ العينة",
-            "temperaturePlaceHolder": "تحفظ العينة عند درجة حرارة ؟"
+            "temperaturePlaceHolder": "تحفظ العينة عند درجة حرارة ؟",
+            "sampleStatusPlaceHolder": "أختر حالة العينة",
+            "sampleStatus": "حالة العينة",
+            "volumePlaceHolder": "حجم الأنبوب مطلوب",
+            "volume": "حجم الانبوب",
+            "tubeTypePlaceHolder": "أدخل نوع الأنبوب (مثال) 2 ml",
+            "tubeType": "نوع الانبوب",
+            "storageLocationPlaceHolder": "أختر موقع التخزين",
+            "storageLocation": "موقع التخزين",
+            "shelfPlaceHolder": "أدخل موقع الرف",
+            "shelf": "موقع الرف",
+            "rackPlaceHolder": "أدخل موقع الراكات",
+            "rack": "موقع الراكات",
+            "boxPlaceHolder": "أدخل موقع البوكس",
+            "box": "موقع البوكس",
+            "positionPlaceHolder": "أدخل فهرس الموقع",
+            "position": "فهرس الموقع",
+            "notesPlaceHolder": "دون ملاحظاتك عن حفظ النتيجة الحيوية للعينة",
+            "notes": "ملاحظات",
+            "plateTypePlaceHolder": "أختر نوع اللوحة",
+            "plateType": "نوع اللوحة",
+            "totalWellsPlaceHolder": "أختر عدد الأبار الكلي",
+            "totalWells": "عدد الأبار الكلي",
+            "plateStatusPlaceHolder": "أختر حالة اللوحة",
+            "plateStatus": "حالة اللوحة",
+            "aliquotNumberPlaceHolder": "أدخل عدد العينات الجزئية (ALIQUOT)",
+            "aliquotNumber": "عدد العينات الجزئية (ALIQUOT)",
+            "materialTypePlaceHolder": "أختر نوع المادة",
+            "materialType": "نوع المادة",
+            "concentrationPlaceHolder": "أدخل تركيز العينات الجزئية بوحدة قياس (ng/µL)",
+            "concentration": "تركيز العينات الجزئية (ng/µL)",
+            "mediaTypePlaceHolder": "أدخل نوع الوسط للـ CULTURE_STOCK",
+            "mediaType": "نوع الوسط",
+            "glycerolPercentagePlaceHolder": "أدخل نسبة الجليسرول %",
+            "glycerolPercentage": "نسبة الجليسرول",
+            "cultureObjectTypePlaceHolder": "أختر نوع الكائن",
+            "cultureObjectType": "نوع الكائن",
+            "cultureObjectTypeNamePlaceHolder": "أدخل اسم الكائن",
+            "cultureObjectTypeName": "اسم الكائن",
+            "tubesNumberPlaceHolder": "أدخل عدد الانابيب",
+            "tubesNumber": "عدد الأنابيب",
+            "attachmentsPlaceHolder": "أرفق ملفاً (Image / PDF / EXCEL , WORD )",
+            "attachments": "مرفقات"
+
+        },
+        "bioBankingProfile": {
+            "title": "تفاصيل عن النتيجة الحيوية",
+            "subBarCode": "باركود",
+            "testType": "نوع حفظ العينة",
+            "sample": "العينة",
+            "itemType": "نوع حفظ النتيجة الحيوية",
+            "temperature": "درجة حفظ العينة",
+            "volume": "حجم الانبوب",
+            "tubeType": "نوع الانبوب",
+            "storageLocation": "موقع التخزين",
+            "shelf": "موقع الرف",
+            "rack": "موقع الراكات",
+            "box": "موقع البوكس",
+            "position": "فهرس الموقع",
+                            "printBarcode": "طباعة",
+
+            "notes": {
+                "title": "ملاحظات"
+            },
+            "attachments": {
+                "title": "مرفقات"
+            },
+            "plateType": "نوع اللوحة",
+            "usedWells": "الأبار المستخدمة",
+            "aliquotNumber": "عدد العينات الجزئية (ALIQUOT)",
+            "concentration": "تركيز العينات الجزئية (ng/µL)",
+            "mediaType": "نوع الوسط",
+            "glycerolPercentage": "نسبة الجليسرول",
+            "createdBy": "تم بواسطة",
+            "date": "التاريخ"
         },
         "addBioBanking": "إضافة نتيجة حيوية",
         "editBioBanking": "تعديل نتيجة حيوية",
         "addBioBankingSuccessStatus": "تم اضافة العينة بنجاح",
         "deleteBioBankingSuccessStatus": "تم حذف العينة بنجاح"
+    },
+    "stepSlasRulesManagement": {
+        "stepSlasRulesFields": {
+            "departmentPlaceHolder": "قم بإختيار القسم المرتبط بتعريف الوقت",
+            "department":"القسم",
+            "testTypePlaceHolder":"قم بإختيار نوع الاختبار المرتبط بتعريف الاختبار",
+            "testType":"نوع الأختبار",
+            "masterStepPlaceHolder":"قم بتحديد خطوة الأختبار المرتبط بتعريف الوقت",
+            "masterStep":"خطوة الأختبار",
+            "slaMinutes": "الوقت المستغرق (دقائق)",
+            "slaMinutesPlaceHolder": "أدخل الوقت المستغرق للأنتهاء من خطوة الاختبار بالدقائق",
+            "warningMinutes": "وقت التنبيه (دقائق)",
+            "warningMinutesPlaceHolder": "حدد متى يُرسل النظام إشعار بتحذير التأخير عن الانتهاء من خطوة الاختبار"
+        },
+        "stepSlasRulesTable": {
+            "department":"القسم",
+            "testType":"نوع الأختبار",
+            "masterStep":"خطوة الأختبار",
+            "slaMinutes": "الوقت المستغرق (دقائق)",
+            "warningMinutes": "وقت التنبيه (دقائق)",
+            "date": "التاريخ"
+        },
+        "addStepSlasRule": "اضافة تعريف وقت للخطوة",
+        "editStepSlasRule": "تعديل بيانات تعريف الوقت للخطوة",
+        "addStepSlasRuleSuccessStatus": "تم اضافة تعريف وقت للخطوة بنجاح",
+        "deleteStepSlasRuleSuccessStatus": "تم حذف تعريف وقت الخطوة بنجاح"
     },
     "settings": {
         "editMyProfile": {

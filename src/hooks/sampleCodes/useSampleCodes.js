@@ -108,5 +108,14 @@ export default function useSampleCodes(initialPage = 1) {
 
     /** Without Pagination */
     fetchSampleCodesWithoutPagination,
+    exportSheet: async (ids = []) => {
+      try {
+        const { data } = await sampleCodesService.exportSheet(ids);
+        window.open(data.data, "_blank");
+      } catch (e) {
+        console.log(e);
+        alert("فشل تصدير شيت الإكسيل");
+      }
+    },
   };
 }

@@ -9,11 +9,14 @@ const INITIAL_FILTERS = {
 export default function useDashboard() {
   /** Samples Status Statics Numeric  */
   const [samplesStatusNumericStats, setSamplesStatusNumericStats] = useState(
-    {}
+    {},
   );
 
   /** Latest Activities */
   const [latestActivities, setLatestActivities] = useState([]);
+
+  /** Handoff */
+  const [latestHandoff, setLatestHandoff] = useState([]);
 
   /** Percentage Samples Status */
   const [sampleStatusPercentage, setSampleStatusPercentage] = useState([]);
@@ -40,24 +43,28 @@ export default function useDashboard() {
       const [
         sampleStatusStaticNumbersRes,
         latestActivitiesRes,
+        latestHandoffRes,
         sampleStatusPercentageRes,
-        activeWorkflowsRes,
-        sampleConditionsStatsRes,
+        // activeWorkflowsRes,
+        // sampleConditionsStatsRes,
         sampleTrendsRes,
       ] = await Promise.all([
         homeService.getSampleByStatusNumeric(filters),
         homeService.getLatestActivities(filters),
+        homeService.getLatestHandoffs(filters),
         homeService.getPercentageOfSampleStatus(filters),
-        homeService.getActiveWorkflows(filters),
-        homeService.getSamplesConditions(filters),
+        // homeService.getActiveWorkflows(filters),
+        // homeService.getSamplesConditions(filters),
         homeService.getSamplesTrends(filters),
       ]);
-      console.log(sampleTrendsRes?.data?.data);
+      console.log(sampleStatusStaticNumbersRes);
+      // console.log(sampleTrendsRes?.data?.data);
       setSamplesStatusNumericStats(sampleStatusStaticNumbersRes?.data?.data);
       setLatestActivities(latestActivitiesRes?.data?.data);
+      setLatestHandoff(latestHandoffRes?.data?.data);
       setSampleStatusPercentage(sampleStatusPercentageRes?.data?.data);
-      setActiveWorkflows(activeWorkflowsRes?.data?.data);
-      setSampleConditionsStats(sampleConditionsStatsRes?.data?.data);
+      // setActiveWorkflows(activeWorkflowsRes?.data?.data);
+      // setSampleConditionsStats(sampleConditionsStatsRes?.data?.data);
       setSampleTrends(sampleTrendsRes?.data?.data);
     } catch (error) {
       setError(error);
@@ -72,11 +79,12 @@ export default function useDashboard() {
     fetchDashboardStats();
   }, [fetchDashboardStats]);
   return {
-    sampleConditionsStats,
+    // sampleConditionsStats,
     sampleStatusPercentage,
     samplesStatusNumericStats,
     latestActivities,
-    activeWorkflows,
+    latestHandoff,
+    // activeWorkflows,
     sampleTrends,
     filters,
     loading,

@@ -56,12 +56,13 @@ const AuthSlice = createSlice({
       state.token = token;
       state.remember = remember;
       state.loading = false;
+      localStorage.setItem("token", token);
 
-      if (remember) {
-        localStorage.setItem("token", token);
-      } else {
-        sessionStorage.setItem("token", token);
-      }
+      // if (remember) {
+      //   localStorage.setItem("token", token);
+      // } else {
+      //   sessionStorage.setItem("token", token);
+      // }
     });
 
     builder.addCase(loginThunk.rejected, (state, action) => {

@@ -18,8 +18,8 @@ export const loadAuthedUserThunk = createAsyncThunk(
       }
 
       return thunkAPI.rejectWithValue(
-        error?.response?.data?.message || "SERVER ERROR"
+        error?.response?.data?.message || "SERVER ERROR",
       );
     }
-  }
+  },
 );

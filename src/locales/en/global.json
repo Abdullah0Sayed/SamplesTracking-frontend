@@ -1,12 +1,12 @@
 {
     "global": {
-        "phoneVerified": "Verified successfully! You can now enjoy all our services.",
+        "phoneVerified": "Phone verified successfully! You can now enjoy all our services.",
         "passwordVerified": "Password updated successfully",
         "continue": "Continue",
         "arabic": "Arabic",
         "english": "English",
         "search": "Search",
-        "loadingData": "Loading...",
+        "loadingData": "Loading data...",
         "errorInLoadingData": "An error occurred while loading data",
         "noDataFounded": "No data found",
         "save": "Save",
@@ -19,32 +19,32 @@
         "successUpdateProcessingRequest": "Data updated successfully",
         "successAddProcessingRequest": "Data added successfully",
         "add": "Add",
-        "confirmLogout": "Are you sure you want to log out?",
+        "confirmLogout": "Are you sure you want to logout?",
         "selected": "Selected",
         "download": "Download",
         "notUploadedFile": "No file selected yet",
-        "dismatchPassword": "New password does not match confirmation password",
+        "dismatchPassword": "The new password does not match the password confirmation",
         "active": "Active",
         "inActive": "Inactive",
-        "positive": "Positive",
-        "passive": "Negative",
-        "in_progress": "Not completed yet",
+        "positive": "Positive rating",
+        "passive": "Negative rating",
+        "in_progress": "In progress",
         "completed": "Completed",
         "unSelected": "Unselected",
         "update": "Update",
         "yes": "Yes",
         "no": "No",
-        "hi": "Hi, ",
+        "hi": "Hello, ",
         "dashboard": "Dashboard",
         "controls": "Controls",
         "sample": "Sample",
         "admins": "Admins",
         "selectAll": "Select all",
         "pageNotFoundHeading": "Page not found",
-        "pageNotFoundHint": "Sorry, the path you are trying to access does not exist.",
+        "pageNotFoundHint": "Sorry, the path you are trying to access does not exist in the scope",
         "unAuthorizedAccessHeading": "Unauthorized access",
-        "unAuthorizedAccessHint": "Sorry, you do not have permission to access this page using the provided credentials.",
-        "berRangeOfTime": "Sample / selected time range",
+        "unAuthorizedAccessHint": "Sorry, you do not have permission to access this page using the credentials you provided",
+        "berRangeOfTime": "Sample / Specified time period",
         "downloadReport": "Download report"
     },
     "layouts": {
@@ -60,17 +60,27 @@
                 "title": "Roles"
             },
             "settings": {
-                "sampleCodes": "Sample Codes",
-                "testCodes": "Test Codes",
+                "sampleCodes": "Sample Types",
+                "testCodes": "Test Types",
                 "workflows": "Workflows",
                 "refrigerators": "Refrigerators",
                 "freezers": "Freezers",
                 "laboratories": "Laboratories",
                 "title": "Settings",
-                "editMyProfile": "Edit Profile"
+                "departments": "Departments",
+                "masterSteps": "Master Test Steps",
+                "storageLocations": "Storage Locations",
+                "workflowSteps": "Workflow Definition",
+                "queues": "Work Queues",
+                "editMyProfile": "Edit My Profile"
             },
             "samples": "Samples Management",
-            "bioBankingManagement": "Biobanking Management"
+            "bioBankingManagement": "Biobanking Management",
+            "queuesManagement": {
+                "title": "Work Queues Management",
+                "queues": "Work Queues",
+                "overView": "Overview"
+            }
         },
         "header": {
             "notifications": "Notifications",
@@ -78,167 +88,268 @@
             "logout": "Logout"
         }
     },
-    "auth": {
-        "login": {
-            "title": "Login",
-            "hint": "Enter your details to start using the dashboard and manage your work easily.",
-            "heroLoginHeading": "An easy dashboard to manage your work",
-            "heroLoginDescription": "Enjoy a smart and secure management experience through a simplified dashboard that helps you monitor and organize the system efficiently.",
-            "forgetPassword": "Forgot password?",
-            "rememberMe": "Remember me",
-            "fields": {
-                "email": "Email",
-                "emailPlaceHolder": "Enter email",
-                "phone": "Mobile number",
-                "phonePlaceHolder": "+966 Enter mobile number",
-                "password": "Password",
-                "passwordConfirmation": "Confirm password",
-                "passwordPlaceHolder": "Enter password",
-                "passwordConfirmationPlaceHolder": "Re-enter password"
-            }
-        },
-        "forgetPassword": {
-            "title": "Forgot password?",
-            "hint": "Enter your registered mobile number and we will send you a verification code to reset your password.",
-            "heroLoginDescription": "Forgot your password? Don’t worry, reset it easily and continue managing your work without interruption.",
-            "rememberPassword": "Remembered your password?",
-            "send": "Send"
-        },
-        "resetPassword": {
-            "title": "Reset password",
-            "hint": "Choose a new password to secure your account.",
-            "heroLoginDescription": "Create a new password to protect your data and ensure a smooth and secure experience.",
-            "setNewPassword": "Set new password"
-        },
-        "verifyOtp": {
-            "title": "Verify mobile number",
-            "hint1": "We have sent a 4-digit verification code to your mobile:",
-            "hint2": "Please enter the code below to complete the process.",
-            "heroLoginDescription": "Your security is our priority. Enter the verification code to complete the process safely.",
-            "verify": "Verify"
-        }
-    },
-    "dashboard": {
-        "headerHint": "Here you can monitor platform performance and manage users easily."
-    },
-    "home": {
-        "receivedSamples": "Received samples",
-        "inProgressSamples": "Samples under testing",
-        "completedSamples": "Completed samples",
-        "canceledSamples": "Canceled samples",
-        "latestTransactions": {
-            "title": "Latest 10 system activities",
-            "created_by": "Created by",
-            "causer_type": "Entity",
-            "description": "Description",
-            "event": "Event",
-            "date": "Date"
-        }
-    },
-    "accountsManagement": {
-        "admins_table": {
-            "name": "Name",
-            "phone": "Phone number",
-            "permission": "User role",
-            "status": "Status",
-            "date": "Date"
-        },
-        "adminFields": {
-            "name": "Admin name",
-            "namePlaceHolder": "Enter admin name",
-            "phone": "Mobile number",
-            "phonePlaceHolder": "+966 Enter mobile number",
-            "permission": "User role",
-            "permissionPlaceHolder": "Select user role",
-            "accountStatus": "Account status",
-            "accountStatusPlaceHolder": "Select account status",
+   "auth": {
+    "login": {
+        "title": "Login",
+        "hint": "Enter your details to start using the control panel and manage your work easily.",
+        "heroLoginHeading": "Easy Control Panel for Managing Your Work",
+        "heroLoginDescription": "Enjoy a smart and secure management experience through a simplified control panel that helps you monitor and organize the system efficiently.",
+        "forgetPassword": "Forgot Password?",
+        "rememberMe": "Remember Me",
+        "fields": {
             "email": "Email",
-            "emailPlaceHolder": "Enter email"
-        },
-        "addAdmin": "Add admin",
-        "editAdmin": "Edit admin data",
-        "addAdminSuccessStatus": "Admin added successfully",
-        "blockAdminSuccessStatus": "Admin blocked successfully",
-        "unBlockAdminSuccessStatus": "Admin restored successfully",
-        "roles": {
-            "title": "Roles",
-            "addRole": "Add role",
-            "deleteRoleStatusSuccess": "Role deleted successfully",
-            "rolesFields": {
-                "name": "Role name",
-                "namePlaceHolder": "Enter role name",
-                "acceptOnlyEnLetters": "This field accepts English letters only"
-            }
+            "emailPlaceHolder": "Enter your email",
+            "phone": "Mobile Number",
+            "phonePlaceHolder": "Enter mobile number +966",
+            "password": "Password",
+            "passwordConfirmation": "Confirm Password",
+            "passwordPlaceHolder": "Enter your password",
+            "passwordConfirmationPlaceHolder": "Re-enter your password"
         }
     },
+    "forgetPassword": {
+        "title": "Forgot Password?",
+        "hint": "Enter your registered mobile number and we will send you a verification code to reset your password.",
+        "heroLoginDescription": "Forgot your password? Don't worry, reset it easily and continue managing your work without interruption.",
+        "rememberPassword": "Remembered your password?",
+        "send": "Send"
+    },
+    "resetPassword": {
+        "title": "Reset Password",
+        "hint": "Choose a new password to protect your account.",
+        "heroLoginDescription": "Create a new password to protect your data and ensure a smooth and secure experience.",
+        "setNewPassword": "Set New Password"
+    },
+    "verifyOtp": {
+        "title": "Verify Mobile Number",
+        "hint1": "We have sent a 4-digit verification code to your mobile:",
+        "hint2": "Please enter the code below to complete the process.",
+        "heroLoginDescription": "Your security is our priority. Enter the verification code to complete the process safely.",
+        "verify": "Verify"
+    }
+},
+   "dashboard": {
+    "headerHint": "Here you can monitor the platform's performance and manage users easily."
+},
+
+    "home": {
+    "receivedSamples": "Received Samples",
+    "inProgressSamples": "Samples In Progress",
+    "completedSamples": "Completed Samples",
+    "canceledSamples": "Canceled Samples",
+    "latestTransactions": {
+        "title": "Last 10 Activities on the System",
+        "created_by": "Created By",
+        "causer_type": "Entity",
+        "description": "Description",
+        "event": "Event",
+        "date": "Date"
+    },
+    "latestHandoff": {
+        "title": "Latest 10 Transfers Between Departments",
+        "sample_barcode": "Sample Barcode",
+        "from_department": "From Department",
+        "to_department": "To Department",
+        "transfer_at": "Transferred At",
+        "created_by": "Created By"
+    }
+}
+,
+  "accountsManagement": {
+    "admins_table": {
+        "name": "Name",
+        "phone": "Phone Number",
+        "permission": "User Role",
+        "status": "Status",
+        "date": "Date"
+    },
+    "adminFields": {
+        "name": "Admin Name",
+        "namePlaceHolder": "Enter admin name",
+        "phone": "Mobile Number",
+        "phonePlaceHolder": "Enter mobile number +966",
+        "password": "Password",
+        "passwordPlaceHolder": "Enter password",
+        "permission": "User Role",
+        "permissionPlaceHolder": "Select user role",
+        "departments": "Assign User to Departments",
+        "departmentsPlaceHolder": "Select allowed departments for the user",
+        "accountStatus": "Account Status",
+        "accountStatusPlaceHolder": "Select account status",
+        "email": "Email",
+        "emailPlaceHolder": "Enter email"
+    },
+    "addAdmin": "Add Admin",
+    "editAdmin": "Edit Admin Data",
+    "addAdminSuccessStatus": "Admin added successfully",
+    "blockAdminSuccessStatus": "Admin blocked successfully",
+    "unBlockAdminSuccessStatus": "Admin restored successfully",
+    "roles": {
+        "title": "Roles",
+        "addRole": "Add Role",
+        "deleteRoleStatusSuccess": "Role deleted successfully",
+        "rolesFields": {
+            "name": "Role Name",
+            "namePlaceHolder": "Enter role name",
+            "acceptOnlyEnLetters": "This field accepts English letters only"
+        }
+    }
+}
+,
     "sampleCodesManagement": {
-        "sampleCodesFields": {
-            "name": "Sample name",
-            "namePlaceHolder": "Enter sample name",
-            "codePlaceHolder": "Enter sample code",
-            "code": "Sample code"
-        },
-        "sample_codes_table": {
-            "name": "Sample name",
-            "code": "Sample code",
-            "date": "Date"
-        },
-        "addSampleCode": "Add sample code",
-        "addClient": "Add account",
-        "addSampleCodeSuccessStatus": "Sample code added successfully",
-        "addCompany": "Add company",
-        "addCompanyAccount": "Add company account",
-        "editCompanyAccount": "Edit company account",
-        "editSampleCode": "Edit sample type data",
-        "editClient": "Edit client data",
-        "deleteSampleCodeSuccessStatus": "Sample code deleted successfully",
-        "unBlockAdminSuccessStatus": "Admin account unblocked successfully",
-        "unBlockClientSuccessStatus": "Client account unblocked successfully",
-        "unBlockCompanySuccessStatus": "Company account unblocked successfully",
-        "blockClientSuccessStatus": "Client account blocked successfully",
-        "blockCompanySuccessStatus": "Company account blocked successfully"
+    "sampleCodesFields": {
+        "name": "Sample Type Name",
+        "namePlaceHolder": "Enter sample type name",
+        "codePlaceHolder": "Enter sample type code",
+        "code": "Sample Code"
     },
+    "sample_codes_table": {
+        "name": "Sample Type Name",
+        "code": "Sample Type Code",
+        "date": "Date"
+    },
+    "addSampleCode": "Add Sample Type",
+    "addClient": "Add Account",
+    "addSampleCodeSuccessStatus": "Sample type added successfully",
+    "addCompany": "Add Company",
+    "addCompanyAccount": "Add Company Account",
+    "editCompanyAccount": "Edit Company Account",
+    "editSampleCode": "Edit Sample Type Data",
+    "editClient": "Edit Client Data",
+    "deleteSampleCodeSuccessStatus": "Sample type deleted successfully",
+    "unBlockAdminSuccessStatus": "Admin account unblocked successfully",
+    "unBlockClientSuccessStatus": "Client account unblocked successfully",
+    "unBlockCompanySuccessStatus": "Company account unblocked successfully",
+    "blockClientSuccessStatus": "Client account blocked successfully",
+    "blockCompanySuccessStatus": "Company account blocked successfully"
+}
+,
     "testCodesManagement": {
-        "testCodesFields": {
-            "name": "Test code name",
-            "namePlaceHolder": "Enter test code name",
-            "codePlaceHolder": "Enter test code",
-            "code": "Test code"
-        },
-        "test_codes_table": {
-            "name": "Sample test code name",
-            "code": "Sample test code",
-            "date": "Date"
-        },
-        "addTestCodeSuccessStatus": "Sample test code added successfully",
-        "addTestCode": "Add test code",
-        "editTestCode": "Edit test code"
+    "testCodesFields": {
+        "name": "Test Type Name",
+        "namePlaceHolder": "Enter test type name",
+        "codePlaceHolder": "Enter test type code",
+        "code": "Test Type Code",
+        "sampleTypesPlaceHolder": "Select sample types associated with the test",
+        "sampleTypes": "Link to Sample Types"
     },
-    "workflowsManagement": {
-        "workflowsFields": {
-            "name": "Workflow name",
-            "namePlaceHolder": "Enter workflow name",
-            "codePlaceHolder": "Enter workflow code",
-            "code": "Workflow code",
-            "sampleCodesPlaceHolder": "Select sample codes related to workflow",
-            "sampleCodes": "Related sample codes",
-            "testCodePlaceHolder": "Select test code related to workflow",
-            "testCode": "Test code",
-            "stepOrderPlaceHolder": "Select execution order",
-            "stepOrder": "Execution order"
-        },
-        "workflows_table": {
-            "name": "Workflow name",
-            "code": "Workflow code",
-            "description": "Description",
-            "date": "Date"
-        },
-        "addWorkflowSuccessStatus": "Workflow added successfully",
-        "deleteWorkflowSuccessStatus": "Workflow deleted successfully",
-        "addWorkflow": "Add workflow",
-        "editWorkflow": "Edit workflow",
-        "addNewRecord": "Add new row"
+    "test_codes_table": {
+        "name": "Test Type Name",
+        "code": "Test Type Code",
+        "date": "Date"
     },
+    "addTestCodeSuccessStatus": "Test type added successfully",
+    "addTestCode": "Add Test Type",
+    "editTestCode": "Edit Test Type"
+},
+"departmentsManagement": {
+    "departmentsFields": {
+        "name": "Department Name",
+        "namePlaceHolder": "Enter department name",
+        "codePlaceHolder": "Enter department code",
+        "code": "Department Code",
+        "isActivePlaceHolder": "Select activity status",
+        "isActive": "Activity Status"
+    },
+    "departments_table": {
+        "name": "Department Name",
+        "code": "Department Code",
+        "date": "Date"
+    },
+    "addDepartmentSuccessStatus": "Department added successfully",
+    "deleteDepartmentSuccessStatus": "Department deleted successfully",
+    "addDepartment": "Add New Department",
+    "editDepartment": "Edit Department Data"
+}
+,"masterStepsManagement": {
+    "masterStepsFields": {
+        "stepName": "Step Name",
+        "stepNamePlaceHolder": "Enter step name",
+        "stepCodePlaceHolder": "Enter step code",
+        "stepCode": "Step Code",
+        "descriptionPlaceHolder": "Enter a short description for the step",
+        "description": "Description"
+    },
+    "masterSteps_table": {
+        "stepName": "Step Name",
+        "stepCode": "Step Code",
+        "description": "Description",
+        "date": "Date"
+    },
+    "addMasterStepSuccessStatus": "Step added successfully",
+    "deleteMasterStepSuccessStatus": "Step deleted successfully",
+    "addMasterStep": "Add New Step",
+    "editMasterStep": "Edit Step Data"
+}
+,"storageLocationsManagement": {
+    "storageLocationsFields": {
+        "unitName": "Storage Location Name",
+        "unitNamePlaceHolder": "Enter storage location name",
+        "unitType": "Storage Location Type",
+        "unitTypePlaceHolder": "Enter storage location type",
+        "totalShelves": "Total Shelves",
+        "totalShelvesPlaceHolder": "Enter total number of shelves",
+        "racksPerShelf": "Total Racks per Shelf",
+        "racksPerShelfPlaceHolder": "Enter total racks per shelf",
+        "boxCapacity": "Box Capacity",
+        "boxCapacityPlaceHolder": "Enter box capacity (example: 9*9)",
+        "activePlaceHolder": "Select activity status",
+        "active": "Activity Status"
+    },
+    "storageLocations_table": {
+        "unitName": "Name",
+        "unitType": "Type",
+        "totalShelves": "Number of Shelves",
+        "racksPerShelf": "Racks/Shelf",
+        "boxCapacity": "Box Capacity",
+        "active": "Status",
+        "date": "Date"
+    },
+    "addStorageLocationSuccessStatus": "Storage location added successfully",
+    "deleteStorageLocationSuccessStatus": "Storage location deleted successfully",
+    "addStorageLocation": "Add New Storage Location",
+    "editStorageLocation": "Edit Storage Location Data"
+}
+,
+   "workflowStepsManagement": {
+    "workflowStepsFields": {
+        "testType": "Test Type",
+        "testTypePlaceHolder": "Select test type",
+        "department": "Department",
+        "departmentPlaceHolder": "Select the department associated with the test type",
+        "masterStep": "Test Step",
+        "masterStepPlaceHolder": "Select the test step",
+        "stepOrder": "Execution Order",
+        "stepOrderPlaceHolder": "Enter the execution order of the test step",
+        "finalStep": "Is it the final step?",
+        "finalStepPlaceHolder": "Specify if it is the final step in the test steps"
+    },
+    "workflowSteps_table": {
+        "testType": "Test Type",
+        "department": "Department",
+        "masterStep": "Test Step",
+        "stepOrder": "Execution Order",
+        "isFinalStep": "Final Step?",
+        "date": "Date"
+    },
+    "addWorkflowStepSuccessStatus": "Workflow step definition added successfully",
+    "deleteWorkflowStepSuccessStatus": "Workflow step definition deleted successfully",
+    "addWorkflowStep": "Add New Workflow Step Definition",
+    "editWorkflowStep": "Edit Workflow Step Definition Data"
+},"queuesManagement": {
+    "title": "Work Queues",
+    "queues_table": {
+        "barcode": "Barcode",
+        "department": "Current Department",
+        "current_step": "Current Step",
+        "queue_name": "Work Queue Name",
+        "counts_for_same_test_type": "Number of Samples for the Same Test",
+        "workflow_started_at": "Workflow Started At",
+        "current_step_started_at": "Current Step Started At",
+        "date": "Date"
+    }
+}
+,
     "laboratoryManagement": {
         "laboratoryFields": {
             "name": "Laboratory name",
@@ -298,142 +409,231 @@
         "editFreezer": "Edit freezer data"
     },
     "samplesManagement": {
-        "samples_table": {
-            "serial_name": "Serial name",
-            "serial_number": "Serial number",
-            "serial_full": "Full serial",
-            "sample_condition": "Sample condition",
-            "current_status": "Current sample status",
-            "is_completed": "Completed?",
-            "qc_status": "Quality control",
-            "received_at": "Received at",
-            "started_at": "Started at",
-            "completed_at": "Completed at"
-        },
-        "sample_tests_status_table": {
-            "status": "Status",
-            "results": "Results",
-            "notes": "Notes",
-            "performed_at": "Performed at",
-            "test_code": "Test code",
-            "created_by": "Created by"
-        },
-        "sample_logs_table": {
-            "from_status": "Previous status",
-            "to_status": "Current status",
-            "type": "Change type",
-            "note": "Notes",
+    "samples_table": {
+        "serial_name": "Serial Name",
+        "serial_number": "Serial Number",
+        "barcode": "Barcode",
+        "process_status": "Process Status",
+        "result_status": "Result Status",
+        "department": "Current Department",
+        "test_type": "Sample Type",
+        "received_by": "Received By",
+        "sample_condition": "Sample Condition",
+        "current_status": "Latest Sample Status",
+        "is_completed": "Is Completed?",
+        "qc_status": "QC Status",
+        "received_at": "Received At",
+        "started_at": "Started At",
+        "completed_at": "Completed At",
+        "date": "Date"
+    },
+    "sample_tests_status_table": {
+        "status": "Status",
+        "results": "Results",
+        "notes": "Notes",
+        "performed_at": "Performed At",
+        "test_code": "Test Code",
+        "created_by": "Created By"
+    },
+    "sample_logs_table": {
+        "from_status": "Previous Status",
+        "to_status": "Current Status",
+        "type": "Change Type",
+        "note": "Notes",
+        "created_at": "Date",
+        "created_by": "Created By"
+    },
+    "samplesFields": {
+        "serialName": "Serial Name",
+        "serialNamePlaceHolder": "Enter serial name",
+        "receivedFrom": "Sample Received From",
+        "receivedFromPlaceHolder": "Enter the name of the entity that sent the sample",
+        "receivedBy": "Sample Receiver Name",
+        "receivedByPlaceHolder": "Enter sample receiver name",
+        "testType": "Test Type",
+        "testTypePlaceHolder": "Select test type",
+        "qcStatus": "QC Status",
+        "qcStatusPlaceHolder": "Select QC status",
+        "sampleCondition": "Sample Condition",
+        "sampleConditionPlaceHolder": "Select sample condition upon receipt",
+        "sampleCode": "Sample Code",
+        "sampleCodePlaceHolder": "Select the sample code to be tested",
+        "workflow": "Workflow",
+        "workflowPlaceHolder": "Select workflow",
+        "rejectReasonPlaceHolder": "Enter QC rejection reason",
+        "rejectReason": "Rejection Reason"
+    },
+    "addSample": "Add Sample",
+    "editSample": "Edit Sample Data",
+    "editSampleData": "Track Sample Test Steps",
+    "addSampleSuccessStatus": "Sample added successfully",
+    "deleteSampleSuccessStatus": "Sample deleted successfully",
+    "sampleProfile": {
+        "mainInfo": "Main Information",
+        "mainInfoData": {
+            "serial_name": "Serial Name",
+            "serial_number": "Serial Number",
+            "barcode": "Barcode",
+            "testType": "Test Type",
+            "processStatus": "Process Status",
+            "received_from": "Received From",
+            "received_by": "Received By",
+            "currentStep": "Current Step",
+            "currentDepartment": "Current Department",
             "created_at": "Date",
-            "created_by": "Created by"
+            "current_status": "Latest Recorded Status",
+            "is_completed": "Is Completed?",
+            "qc_status": "QC Status",
+            "received_at": "Sample Received Date",
+            "started_at": "Sample Start Date",
+            "completed_at": "Sample Completion Date",
+            "canceled_at": "Sample Rejection/Cancellation Date",
+            "sampleCondition": "Sample Condition",
+            "sampleCodeData": "Sample Type Data",
+            "workflowData": "Sample Workflow Data",
+            "rejectionReason": "Sample Rejection Reason",
+            "title": "Sample Data",
+            "moveToNextDepartment": "Move to Next Department",
+            "openBioBankingProcess": "Open Biobanking Process",
+            "updateReceivingQcStatus": "Update QC Status",
+            "printBarcode": "Print"
         },
-        "samplesFields": {
-            "serialName": "Serial name",
-            "serialNamePlaceHolder": "Enter serial name",
-            "receivedFrom": "Received from",
-            "receivedFromPlaceHolder": "Enter source name",
-            "receivedBy": "Received by",
-            "receivedByPlaceHolder": "Enter receiver name",
-            "qcStatus": "Quality control",
-            "qcStatusPlaceHolder": "Select QC status",
-            "sampleCondition": "Sample condition",
-            "sampleConditionPlaceHolder": "Select sample condition",
-            "sampleCode": "Sample code",
-            "sampleCodePlaceHolder": "Select sample code",
-            "workflow": "Workflow",
-            "workflowPlaceHolder": "Select workflow",
-            "rejectReasonPlaceHolder": "Enter QC rejection reason",
-            "rejectReason": "Rejection reason"
+        "workflowLogs": {
+            "title": "Workflow Timeline"
         },
-        "addSample": "Add sample",
-        "editSample": "Edit sample",
-        "editSampleData": "Track sample testing steps",
-        "addSampleSuccessStatus": "Sample added successfully",
-        "deleteSampleSuccessStatus": "Sample deleted successfully",
-        "sampleProfile": {
-            "mainInfo": "Main information",
-            "mainInfoData": {
-                "serial_name": "Serial name",
-                "serial_number": "Serial number",
-                "serial_full": "Full serial",
-                "received_from": "Received from",
-                "received_by": "Received by",
-                "current_status": "Latest recorded status",
-                "is_completed": "Completed?",
-                "qc_status": "Quality control",
-                "received_at": "Received date",
-                "started_at": "Start date",
-                "completed_at": "Completion date",
-                "canceled_at": "Cancellation date",
-                "sampleCondition": "Sample condition",
-                "sampleCodeData": "Sample type data",
-                "workflowData": "Workflow data",
-                "rejectionReason": "Rejection reason"
-            },
-            "sampleTestSteps": "Sample test steps",
-            "logs": "Sample history log"
-        },
-        "editSampleTestStatus": "Edit sample test status",
-        "samplesTestsStatusFields": {
-            "status": "Test status",
-            "statusPlaceholder": "Select test status",
-            "description": "Description",
-            "descriptionPlaceholder": "Enter test description",
-            "notesPlaceholder": "Enter notes during this test",
-            "notes": "Notes",
-            "resultFile": "Test report attachment",
-            "resultFilePlaceholder": "Upload test result report"
-        }
+        "sampleTestSteps": "Sample Test Steps",
+        "logs": "Sample History Logs"
     },
-    "bioBankingManagement": {
-        "bioBanking_table": {
-            "tube_number": "Tube number",
-            "laboratory": "Laboratory",
-            "freezer_id": "Freezer number",
-            "refrigerator_id": "Refrigerator number",
-            "temperature": "Temperature",
-            "notes": "Notes",
-            "sample": "Sample",
-            "date": "Date"
-        },
-        "bioBankingFields": {
-            "tubeNumber": "Tube number",
-            "tubeNumberPlaceHolder": "Enter tube number",
-            "storageLocation": "Storage location",
-            "storageLocationPlaceHolder": "Enter storage location",
-            "freezerNumber": "Storage location (Freezer number)",
-            "freezerNumberPlaceHolder": "Enter freezer number",
-            "refrigeratorNumber": "Storage location (Refrigerator number)",
-            "refrigeratorNumberPlaceHolder": "Enter refrigerator number",
-            "sample": "Sample",
-            "samplePlaceHolder": "Select sample",
-            "temperature": "Storage temperature",
-            "temperaturePlaceHolder": "Sample stored at which temperature?"
-        },
-        "addBioBanking": "Add biobanking record",
-        "editBioBanking": "Edit biobanking record",
-        "addBioBankingSuccessStatus": "Sample added successfully",
-        "deleteBioBankingSuccessStatus": "Sample deleted successfully"
-    },
-    "settings": {
-        "editMyProfile": {
-            "title": "Edit profile",
-            "accountData": "Account data",
-            "password": "Password",
-            "current_password": "Current password",
-            "current_password_placeholder": "Enter current password",
-            "new_password": "New password",
-            "new_password_placeholder": "Enter new password",
-            "confirmation_password": "Confirm password",
-            "confirmation_password_placeholder": "Re-enter password",
-            "successUpdatePassword": "Password updated successfully",
-            "failedUpdatePassword": "Failed to update password",
-            "successUpdateProfile": "Profile updated successfully",
-            "failedUpdateProfile": "Failed to update profile",
-            "name": "Name",
-            "namePlaceHolder": "Enter name",
-            "phone": "Mobile number",
-            "phonePlaceHolder": "Enter mobile number",
-            "removeUserProfileImage": "Remove image"
-        }
+    "editSampleTestStatus": "Edit Sample Test Status",
+    "samplesTestsStatusFields": {
+        "status": "Test Status",
+        "statusPlaceholder": "Select sample status for this test",
+        "description": "Description",
+        "descriptionPlaceholder": "Enter description for the sample when performing this test",
+        "notesPlaceholder": "Add notes occurred during this test",
+        "notes": "Notes",
+        "resultFile": "Test Report Attachment",
+        "resultFilePlaceholder": "Upload test result report"
     }
+}
+,
+    "bioBankingManagement": {
+    "bioBanking_table": {
+        "subBarCode": "Barcode",
+        "sample": "Sample",
+        "itemType": "Biological Sample Preservation Type",
+        "temperature": "Sample Storage Temperature",
+        "volume": "Tube Volume",
+        "tubeType": "Tube Type",
+        "storageLocation": "Storage Location",
+        "shelf": "Shelf Location",
+        "rack": "Rack Location",
+        "box": "Box Location",
+        "position": "Position Index",
+        "notes": "Notes",
+        "plateType": "Plate Type",
+        "usedWells": "Used Wells",
+        "aliquotNumber": "Number of Aliquots (ALIQUOT)",
+        "concentration": "Aliquot Concentration (ng/µL)",
+        "mediaType": "Media Type",
+        "glycerolPercentage": "Glycerol Percentage",
+        "date": "Date"
+    },
+    "bioBankingFields": {
+        "sample": "Sample",
+        "samplePlaceHolder": "Select the sample to preserve",
+        "itemTypePlaceHolder": "Select biological sample preservation type",
+        "itemType": "Biological Sample Preservation Type",
+        "temperature": "Sample Storage Temperature",
+        "temperaturePlaceHolder": "At what temperature is the sample stored?",
+        "volumePlaceHolder": "Tube volume is required",
+        "volume": "Tube Volume",
+        "tubeTypePlaceHolder": "Enter tube type (example: 2 ml)",
+        "tubeType": "Tube Type",
+        "storageLocationPlaceHolder": "Select storage location",
+        "storageLocation": "Storage Location",
+        "shelfPlaceHolder": "Enter shelf location",
+        "shelf": "Shelf Location",
+        "rackPlaceHolder": "Enter rack location",
+        "rack": "Rack Location",
+        "boxPlaceHolder": "Enter box location",
+        "box": "Box Location",
+        "positionPlaceHolder": "Enter position index",
+        "position": "Position Index",
+        "notesPlaceHolder": "Add your notes about preserving the biological sample",
+        "notes": "Notes",
+        "plateTypePlaceHolder": "Select plate type",
+        "plateType": "Plate Type",
+        "usedWellsPlaceHolder": "Enter used wells in JSON format (example) {\"key\": \"value\" }",
+        "usedWells": "Used Wells",
+        "aliquotNumberPlaceHolder": "Enter number of aliquots (ALIQUOT)",
+        "aliquotNumber": "Number of Aliquots (ALIQUOT)",
+        "concentrationPlaceHolder": "Enter aliquot concentration in (ng/µL)",
+        "concentration": "Aliquot Concentration (ng/µL)",
+        "mediaTypePlaceHolder": "Enter media type for CULTURE_STOCK",
+        "mediaType": "Media Type",
+        "glycerolPercentagePlaceHolder": "Enter glycerol percentage %",
+        "glycerolPercentage": "Glycerol Percentage",
+        "attachmentsPlaceHolder": "Attach a file (Image / PDF / EXCEL / WORD)",
+        "attachments": "Attachments"
+    },
+    "bioBankingProfile": {
+        "title": "Biological Sample Details",
+        "subBarCode": "Barcode",
+        "testType": "Sample Preservation Type",
+        "sample": "Sample",
+        "itemType": "Biological Sample Preservation Type",
+        "temperature": "Sample Storage Temperature",
+        "volume": "Tube Volume",
+        "tubeType": "Tube Type",
+        "storageLocation": "Storage Location",
+        "shelf": "Shelf Location",
+        "rack": "Rack Location",
+        "box": "Box Location",
+        "position": "Position Index",
+        "printBarcode": "Print",
+        "notes": {
+            "title": "Notes"
+        },
+        "attachments": {
+            "title": "Attachments"
+        },
+        "plateType": "Plate Type",
+        "usedWells": "Used Wells",
+        "aliquotNumber": "Number of Aliquots (ALIQUOT)",
+        "concentration": "Aliquot Concentration (ng/µL)",
+        "mediaType": "Media Type",
+        "glycerolPercentage": "Glycerol Percentage",
+        "createdBy": "Created By",
+        "date": "Date"
+    },
+    "addBioBanking": "Add Biological Sample",
+    "editBioBanking": "Edit Biological Sample",
+    "addBioBankingSuccessStatus": "Sample added successfully",
+    "deleteBioBankingSuccessStatus": "Sample deleted successfully"
+}
+,
+   "settings": {
+    "editMyProfile": {
+        "title": "Edit Profile",
+        "accountData": "Account Data",
+        "password": "Password",
+        "current_password": "Current Password",
+        "current_password_placeholder": "Enter current password",
+        "new_password": "New Password",
+        "new_password_placeholder": "Enter new password",
+        "confirmation_password": "Confirm Password",
+        "confirmation_password_placeholder": "Re-enter password",
+        "successUpdatePassword": "Password updated successfully",
+        "failedUpdatePassword": "Failed to update password",
+        "successUpdateProfile": "Profile updated successfully",
+        "failedUpdateProfile": "Failed to update profile",
+        "name": "Name",
+        "namePlaceHolder": "Enter name",
+        "phone": "Mobile Number",
+        "phonePlaceHolder": "Enter mobile number",
+        "removeUserProfileImage": "Remove Profile Image"
+    }
+}
+
 }

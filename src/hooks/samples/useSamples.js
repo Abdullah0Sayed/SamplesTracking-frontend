@@ -4,6 +4,9 @@ import { sampleService } from "../../services/samples/sampleService";
 const INITIAL_FILTERS = {
   sorted_by: "",
   search: "",
+  department_id: "",
+  test_type_id: "",
+  master_step_id: "",
 };
 
 export default function useSamples(initialPage = 1) {
@@ -30,8 +33,14 @@ export default function useSamples(initialPage = 1) {
 
     try {
       const { data } = await sampleService.getAllSamples({
-        sorted_by: filters.sorted_by || undefined,
-        search: filters.search || undefined,
+        sorted_by: filters.sorted_by !== null ? filters.sorted_by : undefined,
+        search: filters.search !== null ? filters.search : undefined,
+        department_id:
+          filters.department_id !== null ? filters.department_id : undefined,
+        master_step_id:
+          filters.master_step_id !== null ? filters.master_step_id : undefined,
+        test_type_id:
+          filters.test_type_id !== null ? filters.test_type_id : undefined,
         page: pagination.current,
       });
 
@@ -47,7 +56,14 @@ export default function useSamples(initialPage = 1) {
     } finally {
       setLoading(false);
     }
-  }, [filters.sorted_by, filters.search, pagination.current]);
+  }, [
+    filters.sorted_by,
+    filters.search,
+    filters.department_id,
+    filters.master_step_id,
+    filters.test_type_id,
+    pagination.current,
+  ]);
 
   /** Auto Fetch on First Load + Filters + Pagination Change */
   useEffect(() => {
@@ -108,5 +124,15 @@ export default function useSamples(initialPage = 1) {
 
     /** Without Pagination */
     fetchSamplesWithoutPagination,
+
+    exportSheet: async (ids = []) => {
+      try {
+        const { data } = await sampleService.exportSheet(ids);
+        window.open(data.data, "_blank");
+      } catch (e) {
+        console.log(e);
+        alert("فشل تصدير شيت الإكسيل");
+      }
+    },
   };
 }

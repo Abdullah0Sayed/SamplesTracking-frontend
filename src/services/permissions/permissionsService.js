@@ -1,6 +1,6 @@
 import http from "../http";
 
-const ENDPOINT = `admin/permissions`;
+const ENDPOINT = `permissions`;
 
 export const permissionsService = {
   getAllPermissions: () => http.get(ENDPOINT),

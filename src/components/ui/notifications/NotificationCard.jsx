@@ -1,20 +1,37 @@
-import React from 'react'
+import React from "react";
+import { BiBell } from "react-icons/bi";
 
-const NotificationCard = () => {
+const NotificationCard = ({
+  alertTitle,
+  alertDescription,
+  isReading,
+  onClick,
+}) => {
   return (
-  <div className={`flex flex-row justify-between items-center p-4 cursor-pointer hover:bg-grey-8 transition border-b-2 border-grey-1/30 last:border-none`}>
-                                        <div className={`notificationInfo flex flex-row gap-4 items-center`}>
-                                            <div className={`w-12 h-12 bg-primary-color text-white font-bold rounded-full flex justify-center items-center`}>
-                                                A
-                                            </div>  
-                                            <div className={`flex flex-col gap-2`}>
-                                                <p className={`text-lg font-semibold`}>العنوان</p>
-                                                <p className={`text-sm`}>الوصف</p>
+    <div
+      className={`w-full flex flex-row justify-between items-center p-2 cursor-pointer ${isReading ? "bg-primary-color/0 rounded-md" : "bg-white border rounded-md"} hover:bg-grey-8 transition border-b-2 border-grey-1/30 last:border-none`}
+      onClick={onClick}
+    >
+      <div
+        className={`notificationInfo flex flex-row gap-2 justify-between items-center`}
+      >
+        <div className={`w-fit`}>
+          <div
+            className={`w-8 h-8 bg-primary-color/80 text-white font-bold rounded-full flex justify-center items-center`}
+          >
+            <BiBell />
+          </div>
+        </div>
 
-                                            </div>
-                                        </div>
-                                      <p className={`text-sm`}>منذ دقيقة</p>
-                                    </div>  )
-}
+        <div className={`flex flex-col gap-1`}>
+          <p className={`text-sm font-semibold`}>{alertTitle}</p>
+          <p className={`text-xs max-w-2xl text-justify leading-tight`}>
+            {alertDescription}
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};
 
-export default NotificationCard
+export default NotificationCard;

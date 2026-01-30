@@ -108,5 +108,15 @@ export default function useTestCodes(initialPage = 1) {
 
     /** Without Pagination */
     fetchTestCodesWithoutPagination,
+
+    exportSheet: async (ids = []) => {
+      try {
+        const { data } = await testCodesService.exportSheet(ids);
+        window.open(data.data, "_blank");
+      } catch (e) {
+        console.log(e);
+        alert("فشل تصدير شيت الإكسيل");
+      }
+    },
   };
 }

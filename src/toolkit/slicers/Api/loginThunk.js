@@ -12,7 +12,7 @@ export const loginThunk = createAsyncThunk(
       }
 
       return {
-        token: data?.access_token,
+        token: data?.token,
         remember: payload?.rememberMe,
       };
     } catch (error) {
